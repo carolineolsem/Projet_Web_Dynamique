@@ -1,0 +1,113 @@
+-- Création de la base de données Sportify
+CREATE DATABASE Sportify;
+USE Sportify;
+
+-- Table des utilisateurs
+CREATE TABLE utilisateurs (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nom VARCHAR(100) NOT NULL,
+    prenom VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    mot_de_passe VARCHAR(255) NOT NULL,
+    type_utilisateur ENUM('administrateur', 'coach', 'client') NOT NULL,
+    date_creation TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Table des coachs (personnels de sport)
+CREATE TABLE coachs (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    utilisateur_id INT NOT NULL,
+    specialite VARCHAR(100) NOT NULL,
+    photo VARCHAR(255),
+    cv VARCHAR(255),
+    salle VARCHAR(255),
+    FOREIGN KEY (utilisateur_id) REFERENCES utilisateurs(id) ON DELETE CASCADE
+);
+
+-- Table des clients
+CREATE TABLE clients (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    utilisateur_id INT NOT NULL,
+    adresse VARCHAR(255),
+    ville VARCHAR(100),
+    code_postal VARCHAR(20),
+    pays VARCHAR(100),
+    telephone VARCHAR(20),
+    carte_etudiant VARCHAR(50),
+    FOREIGN KEY (utilisateur_id) REFERENCES utilisateurs(id) ON DELETE CASCADE
+);
+
+-- Table des disponibilités des coachs
+CREATE TABLE disponibilites (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    coach_id INT NOT NULL,
+    jour ENUM('lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi', 'samedi', 'dimanche') NOT NULL,
+    heure_debut TIME NOT NULL,
+    heure_fin TIME NOT NULL,
+    FOREIGN KEY (coach_id) REFERENCES coachs(id) ON DELETE CASCADE
+);
+
+-- Table des rendez-vous
+CREATE TABLE rendez_vous (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    client_id INT NOT NULL,
+    coach_id INT NOT NULL,
+    date_rdv DATE NOT NULL,
+    heure_debut TIME NOT NULL,
+    heure_fin TIME NOT NULL,
+    statut ENUM('confirmé', 'annulé') DEFAULT 'confirmé',
+    FOREIGN KEY (client_id) REFERENCES utilisateurs(id) ON DELETE CASCADE,
+    FOREIGN KEY (coach_id) REFERENCES coachs(id) ON DELETE CASCADE
+);
+
+-- Table des activités sportives
+CREATE TABLE activites_sportives (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nom VARCHAR(100) NOT NULL
+);
+
+-- Table des coachs assignés aux activités sportives
+CREATE TABLE coachs_activites (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    coach_id INT NOT NULL,
+    activite_id INT NOT NULL,
+    FOREIGN KEY (coach_id) REFERENCES coachs(id) ON DELETE CASCADE,
+    FOREIGN KEY (activite_id) REFERENCES activites_sportives(id) ON DELETE CASCADE
+);
+
+-- Table des paiements
+CREATE TABLE paiements (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    client_id INT NOT NULL,
+    montant DECIMAL(10, 2) NOT NULL,
+    date_paiement TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    type_carte ENUM('Visa', 'MasterCard', 'American Express', 'PayPal') NOT NULL,
+    numero_carte VARCHAR(20) NOT NULL,
+    nom_sur_carte VARCHAR(100) NOT NULL,
+    date_expiration DATE NOT NULL,
+    code_securite VARCHAR(4) NOT NULL,
+    FOREIGN KEY (client_id) REFERENCES utilisateurs(id) ON DELETE CASCADE
+);
+
+-- Table des événements de la semaine
+CREATE TABLE evenements (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    titre VARCHAR(255) NOT NULL,
+    description TEXT NOT NULL,
+    date_evenement DATE NOT NULL,
+    image VARCHAR(255),
+    type_evenement ENUM('porte ouverte', 'match', 'rencontre', 'exhibition', 'bulletin') NOT NULL,
+    date_creation TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Table des messages (pour la communication)
+CREATE TABLE messages (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    expediteur_id INT NOT NULL,
+    destinataire_id INT NOT NULL,
+    contenu TEXT NOT NULL,
+    date_envoi TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    type_message ENUM('texto', 'audio', 'video', 'courriel') NOT NULL,
+    FOREIGN KEY (expediteur_id) REFERENCES utilisateurs(id) ON DELETE CASCADE,
+    FOREIGN KEY (destinataire_id) REFERENCES utilisateurs(id) ON DELETE CASCADE
+);

@@ -46,7 +46,7 @@ $connexion->close();
                <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
                <li class="nav-item"><a class="nav-link" href="parcourir.html">Tout Parcourir </a></li>
                <li class="nav-item"><a class="nav-link" href="recherche.html">Recherche</a></li>
-               <li class="nav-item"><a class="nav-link" href="rendezvous.html">RDV</a></li>
+               <li class="nav-item"><a class="nav-link" href="RDV.html">RDV</a></li>
                <li class="nav-item"><a class="nav-link" href="compte.html">Connexion</a></li>
            </ul>
        </div>

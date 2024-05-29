@@ -1,6 +1,6 @@
 <?php
-
-$serveur = "sportify.mysql.database.azure.com"; // Adresse du serveur MySQL
+// Connexion à la base de données
+$serveur = "sportify.mysql.database.azure.com"; // Adresse du serveur MySQL Azure
 $utilisateur = "ece"; // Nom d'utilisateur MySQL
 $motdepasse = "Sportify!"; // Mot de passe MySQL
 $basededonnees = "tst"; // Nom de la base de données MySQL
@@ -12,7 +12,7 @@ if ($connexion->connect_error) {
 
 
 // Rest of your code...
-// RENVOIE LA LISTE DES AVIOSN (ID, NAME)
+// RENVOIE LA LISTE DES AVIOSN (ID, NAME                   )
     $sql = "SELECT * FROM tst.avions";
     $resultat = $connexion->query($sql);
     if ($resultat->num_rows > 0) {

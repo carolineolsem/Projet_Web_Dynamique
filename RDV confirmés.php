@@ -1,13 +1,12 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "Sportify";
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+$serveur = "sportify.mysql.database.azure.com"; // Adresse du serveur MySQL Azure
+$utilisateur = "ece"; // Nom d'utilisateur MySQL
+$motdepasse = "Sportify!"; // Mot de passe MySQL
+$basededonnees = "sportify"; // Nom de la base de données MySQL
+$port = 3306; // Replace with your MySQL server's port if it's not 3306
+$connexion = new mysqli($serveur, $utilisateur, $motdepasse, $basededonnees, $port);
+if ($connexion->connect_error) {
+    die("Échec de la connexion à la base de données : " . $connexion->connect_error);
 }
 
 $client_id = 5;
@@ -18,9 +17,9 @@ $sql = "SELECT rdv.id, rdv.date_rdv, rdv.heure_debut, rdv.heure_fin, u.nom AS co
         JOIN utilisateurs u ON c.utilisateur_id = u.id
         WHERE rdv.client_id = $client_id AND rdv.statut = 'confirmé'";
 
-$result = $conn->query($sql);
+$result = $connexion->query($sql);
 
-$conn->close();
+$connexion->close();
 ?>
 
 <!DOCTYPE html>
@@ -66,7 +65,7 @@ $conn->close();
                 <div class="rdv-details">Téléphone:</div>
                 <div class="rdv-details">Document demandé: [Insérer Document]</div>
                 <div class="rdv-details">Digicode: [Insérer Digicode]</div>
-                <form method="post" action="annuler_rdv.php">
+                <form method="post" action="RDV%20annuler.php">
                     <input type="hidden" name="rdv_id" value="<?php echo $row['id']; ?>">
                     <button type="submit" class="cancel-button">Annulation de RDV</button>
                 </form>

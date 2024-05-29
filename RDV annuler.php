@@ -17,16 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['rdv_id'])) {
     // Mettre à jour le statut du rendez-vous à "annulé"
     $sql = "UPDATE rendez_vous SET statut = 'annulé' WHERE id = $rdv_id";
 
-    if ($connexion->query($sql) === TRUE) {
-        echo "Rendez-vous annulé avec succès.";
-    } else {
-        echo "Erreur lors de l'annulation du rendez-vous: " . $connexion->error;
-    }
+    echo "<p>Rendez-vous annulé avec succès.</p>";
+
 }
 
-$connexion->close();
-
-// Rediriger vers la page des rendez-vous confirmés
-header("Location: rendez_vous_confirmes.php");
-exit;
-?>

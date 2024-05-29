@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil - Sportify</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Sportify</h1>
+        <nav class="navbar navbar-expand-md">
+            <img class="navbar-brand" src="logo.png" alt="logo" style="width:40px;">
+            <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#main-navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="main-navigation">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="parcourir.html">Tout Parcourir</a></li>
+                    <li class="nav-item"><a class="nav-link" href="recherche.html">Recherche</a></li>
+                    <li class="nav-item"><a class="nav-link" href="rendezvous.html">RDV</a></li>
+                    <li class="nav-item"><a class="nav-link" href="compte.html">Connexion</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="carousel-container">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="d-block w-100" src="image1.jpg" alt="First slide">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Equipe de volley de Sportify</h5>
+                    <p>Venez découvrir nos jeunes talents au tournoi universitaire de volley!</p>
+                </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="image2.jpg" alt="Second slide">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Equipe de foot de Sportify</h5>
+                    <p>Découvrez notre équipe de gagnant.</p>
+                </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="image3.jpg" alt="Third slide">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Equipe de basket de sportify</h5>
+                    <p>Assistez aux matchs des gagnants du tournoi universitaire 2024</p>
+                </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+
+    <main>
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Adresse : 123 Rue du Sport, 75001 Paris, France</p>
+            <p>Email : info@sportify.com</p>
+            <p>Téléphone : 01 23 45 67 89</p>
+        </section>
+
+        <section id="horaires">
+            <h2>Horaires d'ouverture</h2>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Jour</th>
+                        <th>Horaires</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Lundi</td>
+                        <td>08:00 - 20:00</td>
+                    </tr>
+                    <tr>
+                        <td>Mardi</td>
+                        <td>08:00 - 20:00</td>
+                    </tr>
+                    <tr>
+                        <td>Mercredi</td>
+                        <td>08:00 - 20:00</td>
+                    </tr>
+                    <tr>
+                        <td>Jeudi</td>
+                        <td>08:00 - 20:00</td>
+                    </tr>
+                    <tr>
+                        <td>Vendredi</td>
+                        <td>08:00 - 20:00</td>
+                    </tr>
+                    <tr>
+                        <td>Samedi</td>
+                        <td>09:00 - 18:00</td>
+                    </tr>
+                    <tr>
+                        <td>Dimanche</td>
+                        <td>Fermé</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="evenements">
+            <h2>Événements à venir</h2>
+            <div class="event">
+                <img src="portes_ouvertes.jpg" alt="Portes ouvertes" class="feature-image">
+                <div class="event-text">
+                    <h3>Portes ouvertes de Sportify</h3>
+                    <p>Rejoignez-nous pour une journée portes ouvertes et découvrez nos installations.</p>
+                    <p>Date : 5 juin 2024</p>
+                </div>
+            </div>
+            <div class="event">
+                <img src="match_rugby.jpg" alt="Match de rugby" class="feature-image">
+                <div class="event-text">
+                    <h3>Match de rugby</h3>
+                    <p>Match entre Omnes Education et les Visiteurs.</p>
+                    <p>Date : 10 juin 2024</p>
+                </div>
+            </div>
+            <div class="event">
+                <img src="coach_tennis.jpg" alt="Rencontre avec le coach de tennis" class="feature-image">
+                <div class="event-text">
+                    <h3>Rencontre avec le coach de tennis</h3>
+                    <p>Rencontrez notre coach de tennis et obtenez des conseils personnalisés.</p>
+                    <p>Date : 15 juin 2024</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="actualites">
+            <h2>Actualités</h2>
+            <p>Découvrez les dernières nouvelles et mises à jour de Sportify.</p>
+            <!-- Ajouter les actualités ici -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Sportify. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>

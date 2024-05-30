@@ -77,4 +77,8 @@ $connexion->close();
     <?php endif; ?>
 </body>
 
+<footer>
+    <p>&copy; 2024 Sportify. Tous droits réservés.</p>
+</footer>
+
 </html>

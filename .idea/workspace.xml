@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4eba4a59-222f-49e9-bc1a-3f53622f8b2d" name="Changes" comment="modif">
+    <list default="true" id="4eba4a59-222f-49e9-bc1a-3f53622f8b2d" name="Changes" comment="modif liens">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RDV annuler.php" beforeDir="false" afterPath="$PROJECT_DIR$/RDV annuler.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RDV confirmés.php" beforeDir="false" afterPath="$PROJECT_DIR$/RDV confirmés.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RDV.html" beforeDir="false" afterPath="$PROJECT_DIR$/RDV.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imgs/logo.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,6 +68,11 @@
     ]
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\carol\PhpstormProjects\Projet_Web_Dynamique\imgs" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -147,7 +150,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717077123253</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="modif liens">
+      <option name="closed" value="true" />
+      <created>1717103035509</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1717103035509</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -159,7 +170,8 @@
     <MESSAGE value="accueil" />
     <MESSAGE value="modif lien Recherche" />
     <MESSAGE value="modif" />
-    <option name="LAST_COMMIT_MESSAGE" value="modif" />
+    <MESSAGE value="modif liens" />
+    <option name="LAST_COMMIT_MESSAGE" value="modif liens" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

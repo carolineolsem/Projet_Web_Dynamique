@@ -3,7 +3,7 @@
 $database = "Sportify";
 
 // Se connecter à la base de données
-$db_handle = mysqli_connect('localhost', 'root', '');
+$db_handle = mysqli_connect('sportify.mysql.database.azure.com', 'ece', 'Sportify!');
 $db_found = mysqli_select_db($db_handle, $database);
 
 // Vérifier si la base de données est accessible

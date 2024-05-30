@@ -31,7 +31,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 coachs.specialite, 
                 coachs.photo, 
                 coachs.cv, 
-                coachs.salle, 
                 disponibilites.jour, 
                 disponibilites.heure_debut, 
                 disponibilites.heure_fin
@@ -124,7 +123,6 @@ $connexion->close();
                 echo "<h2>" . $coach_info["prenom_coach"] . " " . $coach_info["nom_coach"] . "</h2>";
                 echo "<p>Email: " . $coach_info["email"] . "</p>";
                 echo "<p>Spécialité: " . $coach_info["specialite"] . "</p>";
-                echo "<p>Salle: " . $coach_info["salle"] . "</p>";
                 echo "<p><a href='" . $coach_info["cv"] . "' target='_blank'>Voir le CV</a></p>";
             }
             ?>

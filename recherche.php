@@ -15,14 +15,13 @@ if ($db_found) {
             $recherche = $_POST["recherche"];
             
             // Construire la requête SQL
-            $sql = "SELECT u.nom, u.prenom, c.specialite, c.photo, c.cv, c.salle
+            $sql = "SELECT u.nom, u.prenom, c.specialite, c.photo, c.cv
                     FROM coachs c
                     JOIN utilisateurs u ON c.utilisateur_id = u.id
                     WHERE u.nom LIKE '%$recherche%' 
                        OR u.prenom LIKE '%$recherche%'
-                       OR c.specialite LIKE '%$recherche%'
-                       OR c.salle LIKE '%$recherche%'";
-            
+                       OR c.specialite LIKE '%$recherche%'";
+
             // Exécuter la requête SQL
             $result = mysqli_query($db_handle, $sql);
             
@@ -40,7 +39,6 @@ if ($db_found) {
                     // Afficher la spécialité
                     echo '<p>Spécialité: ' . $row["specialite"] . '</p>';
                     // Afficher la salle
-                    echo '<p>Salle: ' . $row["salle"] . '</p>';
                     echo '</div>';
                 }
                 echo '</div>';

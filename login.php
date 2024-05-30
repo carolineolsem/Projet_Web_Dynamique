@@ -2,7 +2,7 @@
 $serveur = "sportify.mysql.database.azure.com"; // Adresse du serveur MySQL
 $utilisateur = "ece"; // Nom d'utilisateur MySQL
 $motdepasse = "Sportify!"; // Mot de passe MySQL
-$basededonnees = "tst"; // Nom de la base de données MySQL
+$basededonnees = "sportify"; // Nom de la base de données MySQL
 $port = 3306; // Port du serveur MySQL
 
 // Connexion à la base de données MySQL

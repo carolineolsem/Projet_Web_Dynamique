@@ -113,6 +113,17 @@ section {
     color: #F4D35E;
 }
 
+#googleMap {
+    width: 100%;
+    height: 400px;
+}
+
+#map{
+    padding: 20px;
+    text-align: center;
+}
+
+
 footer {
     background-color: #007179;
     color: #FAF0CA;

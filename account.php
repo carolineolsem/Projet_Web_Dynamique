@@ -31,7 +31,28 @@ $stmt->bind_param("i", $id);
 $stmt->execute();
 $stmt->store_result();
 
-$email = $stmt->email;
+if ($stmt->num_rows > 0) {
+    $stmt->bind_result($nom, $prenom, $email);
+    $stmt->fetch();
+} else {
+    echo "Utilisateur introuvable.";
+    exit();
+}
+
+// GET type_utilisateur
+$sql = "SELECT type_utilisateur FROM utilisateurs WHERE id = ?";
+$stmt = $connexion->prepare($sql);
+$stmt->bind_param("i", $id);
+$stmt->execute();
+$stmt->store_result();
+
+if ($stmt->num_rows > 0) {
+    $stmt->bind_result($type_utilisateur);
+    $stmt->fetch();
+} else {
+    echo "Utilisateur introuvable.";
+    exit();
+}
 
 
 
@@ -63,10 +84,10 @@ $email = $stmt->email;
         <div class="collapse navbar-collapse" id="main-navigation">
             <ul class="navbar-nav">
                 <li class="nav-item"><a class="nav-link" href="accueil.html">Accueil</a></li>
-                <li class="nav-item"><a class="nav-link" href="parcourir.html">Tout Parcourir</a></li>
+                <li class="nav-item"><a class="nav-link" href="parcourir.php">Tout Parcourir</a></li>
                 <li class="nav-item"><a class="nav-link" href="Recherche.html">Recherche</a></li>
                 <li class="nav-item"><a class="nav-link" href="RDV.html">RDV</a></li>
-                <li class="nav-item"><a class="nav-link" href="login.html">Connexion</a></li>
+                <li class="nav-item"><a class="nav-link" href="account.html"><?php echo $nom ?></a></li>
             </ul>
         </div>
     </nav>
@@ -74,7 +95,23 @@ $email = $stmt->email;
 <body>
     <div class="coach">
     <h1>Bienvenue, <?php echo $prenom . ' ' . $nom; ?>!</h1>
-    <p>Votre ID utilisateur est : <?php echo $id; ?></p>
+    <!-- IF ADMIN, SHOW EVERYTHING -->
+    <?php if ($type_utilisateur == 'administrateur') { ?>
+        <h2>Vous êtes un administrateur.</h2>
+        <a href="admin_users.php">Gérer les utilisateurs</a>
+        <a href="admin_coachs.php">Gérer les coachs</a>
+    <?php } ?>
+    <!-- IF COACH, SHOW COACH PAGE -->
+    <?php if ($type_utilisateur == 'coach') { ?>
+        <h2>Vous êtes un coach.</h2>
+        <a href="coachs/coach.php">Voir votre page de coach</a>
+    <?php } ?>
+    <!-- IF USER, SHOW USER PAGE -->
+    <?php if ($type_utilisateur == 'client') { ?>
+        <h2>Vous êtes un utilisateur.</h2>
+        <a href="users/user.php">Voir votre page d'utilisateur</a>
+    <?php } ?>
+
     </div>
 </div>
 </body>

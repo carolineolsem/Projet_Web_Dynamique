@@ -58,8 +58,8 @@ mysqli_close($db_handle);
         <div class="collapse navbar-collapse" id="main-navigation">
             <ul class="navbar-nav">
                 <li class="nav-item"><a class="nav-link" href="accueil.html">Accueil</a></li>
-                <li class="nav-item"><a class="nav-link" href="parcourir.html">Tout Parcourir</a></li>
-                <li class="nav-item"><a class="nav-link" href="parcourir.html">Recherche</a></li>
+                <li class="nav-item"><a class="nav-link" href="parcourir.php">Tout Parcourir</a></li>
+                <li class="nav-item"><a class="nav-link" href="Recherche.html">Recherche</a></li>
                 <li class="nav-item"><a class="nav-link" href="RDV.html">RDV</a></li>
                 <li class="nav-item"><a class="nav-link" href="login.html">Connexion</a></li>
             </ul>

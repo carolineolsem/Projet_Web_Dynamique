@@ -50,7 +50,7 @@ $result = $connexion->query($sql);
 <header>
     <h1>Sportify</h1>
     <nav class="navbar navbar-expand-md">
-        <img class="navbar-brand" src="logo.png" alt="logo" style="width:40px;">
+        <img class="navbar-brand" src="imgs/acceuil/logo.png" alt="logo" style="width:100px;">
         <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#main-navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -66,7 +66,7 @@ $result = $connexion->query($sql);
     </nav>
 </header>
 <body>
-<h1>Rendez-vous Confirmés</h1>
+<h1>Rendez-vous confirmés</h1>
 
 <?php if ($result->num_rows > 0): ?>
     <?php while($row = $result->fetch_assoc()): ?>
@@ -89,9 +89,7 @@ $result = $connexion->query($sql);
 <?php endif; ?>
 
 </body>
-<footer>
-    <p>&copy; 2024 Sportify. Tous droits réservés.</p>
-</footer>
+
 </html>
 
 <?php

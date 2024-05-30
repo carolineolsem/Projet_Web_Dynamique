@@ -1,0 +1,127 @@
+header {
+   background: #FAF0CA;
+   color: #007179;
+   text-align: center;
+}
+
+
+.navbar {
+   justify-content: center;
+   background: #007179;
+   color: #FAF0CA;
+   font-size: 20px;
+   font-weight: bold;
+}
+.nav-link, .navbar-brand {
+   color: #FAF0CA;
+   cursor: pointer;
+}
+.nav-link {
+   margin-right: 1em !important;
+}
+.nav-link:hover {
+   color: #EE964B;
+}
+.navbar-collapse {
+   justify-content: center;
+}
+
+
+.row {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding-top: 100px;
+}
+
+
+.feature-image {
+   width: 500px;
+   height: auto;
+   max-height: 500px;
+   object-fit: cover;
+}
+
+.barre-recherche {
+    max-width: 600px; /* Largeur maximale de la barre de recherche */
+    margin: 100px auto; /* Centrage horizontal et marge supérieure */
+    border-radius: 20px; /* Bord arrondi */
+    background-color: #f1f1f1; /* Couleur de fond grisée */
+    padding: 10px; /* Espacement interne */
+}
+
+.barre-recherche input[type=search] {
+    width: 100%; /* 100% de la largeur de la barre de recherche */
+    padding: 10px; /* Espacement interne */
+    border: none; /* Supprimer la bordure */
+    border-radius: 20px; /* Bord arrondi */
+    outline: none; /* Supprimer la bordure de focus */
+}
+
+.barre-recherche button[type=submit] {
+    width: 100%; /* 100% de la largeur du bouton */
+    padding: 10px; /* Espacement interne */
+    border: none; /* Supprimer la bordure */
+    border-radius: 20px; /* Bord arrondi */
+    background-color: #007179; /* Couleur de fond du bouton */
+    color: #FAF0CA; /* Couleur du texte */
+    cursor: pointer; /* Curseur pointeur */
+}
+
+.barre-recherche::placeholder {
+    color: #aaa; /* Couleur du texte indicatif */
+    font-style: italic; /* Style d'écriture italique */
+}
+
+.resultats-recherche {
+    margin: 0 auto; /* Centrer la section horizontalement */
+    width: 60%; /* Définir une largeur maximale pour la section */
+    background-color: #f9f9f9; /* Couleur de fond gris clair */
+    padding: 20px; /* Ajouter un espace intérieur */
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Ombre douce */
+}
+
+/* Style pour les éléments individuels des résultats */
+.resultat {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px; /* Espacement entre les résultats */
+    background-color: #e0e0e0; /* Fond grisé pour chaque résultat */
+    padding: 10px; /* Ajouter un espace intérieur */
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1); /* Petite ombre */
+}
+
+/* Style pour les en-têtes des résultats */
+.resultat h2 {
+    font-size: 24px; /* Taille de police */
+    margin-bottom: 5px; /* Espacement en dessous de l'en-tête */
+    color: #007179; /* Couleur du texte */
+}
+
+/* Style pour les détails des résultats */
+.resultat p {
+    font-size: 16px; /* Taille de police */
+    margin: 2px 0; /* Espacement en dessous des détails */
+}
+
+/* Style pour les images dans les résultats */
+.resultat img {
+    border-radius: 10px; /* Coins arrondis */
+    margin-right: 20px; /* Espacement à droite de l'image */
+    width: 100px; /* Taille fixe de l'image */
+    height: 100px; /* Taille fixe de l'image */
+    object-fit: cover; /* Ajuster l'image pour remplir l'espace */
+}
+
+/* Style pour les liens dans les résultats */
+.resultat a {
+    color: #007bff; /* Couleur du lien */
+    text-decoration: none; /* Supprimer la décoration de soulignement */
+}
+
+.resultat a:hover {
+    text-decoration: underline; /* Souligner au survol */
+}

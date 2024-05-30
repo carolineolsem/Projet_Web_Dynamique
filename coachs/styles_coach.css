@@ -94,9 +94,11 @@ th, td {
 }
 .coach-photo img {
     max-width: 150px;
-    border-radius: 50%;
+    justify-content: left;
+    margin-right: 100px;
 }
 .coach-details {
     max-width: 70%;
-    justify-content: left;
+    justify-content: right;
+    margin-left: 100px;
 }

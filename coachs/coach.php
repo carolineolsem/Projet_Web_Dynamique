@@ -112,9 +112,9 @@ $connexion->close();
         <div class="coach-photo">
             <?php
             if ($coach_info && $coach_info['photo']) {
-                echo '<img src="' . $coach_info['photo'] . '" alt="Photo du coach">';
-            } else {
-                echo '<img src="default_profile.png" alt="Photo par défaut">';
+                //echo '<img src=". $coach_info['photo'] . " alt="Photo du coach">';
+                echo "<img src='" . $coach_info['photo'] . "'>";
+                //echo '<img src="../imgs/coachs/guy_dumais.jpg" alt="Photo du coach">';
             }
             ?>
         </div>

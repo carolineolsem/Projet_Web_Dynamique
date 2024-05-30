@@ -1,28 +1,28 @@
 <?php
-$serveur = "sportify.mysql.database.azure.com"; // Adresse du serveur MySQL
-$utilisateur = "ece"; // Nom d'utilisateur MySQL
-$motdepasse = "Sportify!"; // Mot de passe MySQL
-$basededonnees = "sportify"; // Nom de la base de données MySQL
-$port = 3306; // Port du serveur MySQL
 
-// Connexion à la base de données MySQL
+$serveur = "sportify.mysql.database.azure.com";
+$utilisateur = "ece";
+$motdepasse = "Sportify!";
+$basededonnees = "sportify";
+$port = 3306;
+
 $connexion = new mysqli($serveur, $utilisateur, $motdepasse, $basededonnees, $port);
 
 if ($connexion->connect_error) {
     die("Échec de la connexion à la base de données : " . $connexion->connect_error);
 }
 
+session_start();
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST['email'];
     $password = $_POST['password'];
 
-    // Préparer la requête SQL
-    $sql = "SELECT id, nom, prenom FROM utilisateurs WHERE email = ? AND password = ?";
+    $sql = "SELECT id, nom, prenom FROM utilisateurs WHERE email = ? AND mot_de_passe = ?";
     $stmt = $connexion->prepare($sql);
     if ($stmt === false) {
         die("Erreur lors de la préparation de la requête : " . $connexion->error);
     }
-
     $stmt->bind_param("ss", $email, $password);
     $stmt->execute();
     $stmt->store_result();
@@ -30,11 +30,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($stmt->num_rows > 0) {
         $stmt->bind_result($id, $nom, $prenom);
         $stmt->fetch();
-        session_start();
         $_SESSION['id'] = $id;
         $_SESSION['nom'] = $nom;
         $_SESSION['prenom'] = $prenom;
-        header("Location: compte.html");
+        header("Location: account.php");
         exit();
     } else {
         echo "Email ou mot de passe incorrect.";
@@ -44,4 +43,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 
 $connexion->close();
+
+// Vérifier si l'utilisateur est connecté
+if (isset($_SESSION['id'])) {
+    echo "Bonjour, " . $_SESSION['nom'] . " " . $_SESSION['prenom'];
+}
 ?>

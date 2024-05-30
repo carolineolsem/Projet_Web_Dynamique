@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4eba4a59-222f-49e9-bc1a-3f53622f8b2d" name="Changes" comment="modif lien Recherche" />
+    <list default="true" id="4eba4a59-222f-49e9-bc1a-3f53622f8b2d" name="Changes" comment="modif lien Recherche">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accueil.html" beforeDir="false" afterPath="$PROJECT_DIR$/accueil.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -42,11 +45,13 @@
     "JavaScript Debug.RDV annuler.php.executor": "Run",
     "JavaScript Debug.RDV.html.executor": "Run",
     "JavaScript Debug.Recherche.html.executor": "Run",
+    "JavaScript Debug.accueil.html.executor": "Run",
     "JavaScript Debug.avion.html.executor": "Run",
     "JavaScript Debug.avion.php.executor": "Run",
     "JavaScript Debug.parcourir.html.executor": "Run",
     "PHP Script.avion.php.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
     "last_opened_file_path": "C:/php/php.ini",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -107,7 +112,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717063796466</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="modif lien Recherche">
+      <option name="closed" value="true" />
+      <created>1717065854236</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1717065854236</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -116,6 +129,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="modifications codes RDV" />
     <MESSAGE value="modif lien RDV" />
+    <MESSAGE value="accueil" />
     <MESSAGE value="modif lien Recherche" />
     <option name="LAST_COMMIT_MESSAGE" value="modif lien Recherche" />
   </component>

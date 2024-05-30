@@ -97,7 +97,7 @@ $connexion->close();
         </button>
         <div class="collapse navbar-collapse" id="main-navigation">
             <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link" href="../index.html">Accueil</a></li>
+                <li class="nav-item"><a class="nav-link" href="../accueil.html">Accueil</a></li>
                 <li class="nav-item"><a class="nav-link" href="../parcourir.html">Tout Parcourir</a></li>
                 <li class="nav-item"><a class="nav-link" href="../recherche.html">Recherche</a></li>
                 <li class="nav-item"><a class="nav-link" href="../rendezvous.html">RDV</a></li>

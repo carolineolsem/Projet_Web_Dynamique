@@ -270,6 +270,9 @@ else {
         </div>
     </div>
 </main>
+<footer>
+    <p>&copy; 2024 Sportify. Tous droits réservés.</p>
+</footer>
 </body>
 </html>
 

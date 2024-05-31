@@ -60,12 +60,12 @@ $result = $connexion->query($sql);
                 <li class="nav-item"><a class="nav-link" href="parcourir.php">Tout Parcourir</a></li>
                 <li class="nav-item"><a class="nav-link" href="recherche.php">Recherche</a></li>
                 <li class="nav-item"><a class="nav-link" href="RDV.php">RDV</a></li>
-                <li class="nav-item"><a class="nav-link" href="compte.html">Connexion</a></li>
+                <li class="nav-item"><a class="nav-link" href="account.php">Connexion</a></li>
             </ul>
         </div>
     </nav>
 </header>
-<body>
+
 <h1>Rendez-vous confirmés</h1>
 
 <?php if ($result->num_rows > 0): ?>
@@ -88,12 +88,11 @@ $result = $connexion->query($sql);
     <p>Aucun rendez-vous confirmé.</p>
 <?php endif; ?>
 
-</body>
-
 <footer>
     <p>&copy; 2024 Sportify. Tous droits réservés.</p>
 </footer>
 
+</body>
 </html>
 
 <?php

@@ -5,18 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4eba4a59-222f-49e9-bc1a-3f53622f8b2d" name="Changes" comment="modif bdd">
-      <change afterPath="$PROJECT_DIR$/cv_sportify/Alfred.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cv_sportify/Bamba.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cv_sportify/Marie.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cv_sportify/Nicolas.dumont.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cv_sportify/Quentin.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cv_sportify/Thomas.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cv sportify/cv1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/cv_sportify/Beth.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cv sportify/cv2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/cv_sportify/Rachid.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cv sportify/cv3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/cv_sportify/David.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cv sportify/cv4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/cv_sportify/Pierre.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cv sportify/cv5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/cv_sportify/Nicolas.jpg" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -177,7 +166,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717150960265</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="modif bdd">
+      <option name="closed" value="true" />
+      <created>1717157391071</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1717157391071</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

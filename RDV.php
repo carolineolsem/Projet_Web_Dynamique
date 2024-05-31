@@ -17,22 +17,11 @@ else {
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Tout Parcourir - Sportify</title>
-   <link rel="stylesheet" href="stylesheet.css">
+   <title>RDV - Sportify</title>
+   <link rel="stylesheet" href="styles.css">
    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-   <script>
-       $(document).ready(function() {
-           // Écouter l'événement click sur l'onglet "Recherche" du header
-           $('#lienRecherche').click(function(e) {
-               // Empêcher le comportement par défaut du lien
-               e.preventDefault();
-               // Afficher la barre de recherche
-               $('#barreRecherche').show();
-           });
-       });
-   </script>
 </head>
 <body>
 <header>
@@ -56,17 +45,12 @@ else {
         </div>
     </nav>
 </header>
-
-<!-- Barre de recherche -->
-<div id="barreRecherche" class="barre-recherche">
-    <h1>Faites votre recherche</h1>
-    <form action="barre_recherche.php" method="POST">
-        <label for="recherche">Recherche:</label>
-        <input type="text" id="recherche" name="recherche" placeholder="coach, spécialité, salle" required>
-        <button type="submit" name="rechercher">Rechercher</button>
-    </form>
-</div>
-
-
+    <h1>Bienvenue sur Sportify</h1>
+    <p>Cliquez sur le bouton ci-dessous pour voir vos rendez-vous confirmés.</p>
+    <a href="RDV%20confirmés.php" class="link-button">Voir les Rendez-vous Confirmés</a>
+</body>
+<footer>
+        <p>&copy; 2024 Sportify. Tous droits réservés.</p>
+</footer>
 </body>
 </html>

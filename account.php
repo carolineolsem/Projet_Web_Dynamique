@@ -83,11 +83,11 @@ if ($stmt->num_rows > 0) {
         </button>
         <div class="collapse navbar-collapse" id="main-navigation">
             <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link" href="accueil.html">Accueil</a></li>
+                <li class="nav-item"><a class="nav-link" href="accueil.php">Accueil</a></li>
                 <li class="nav-item"><a class="nav-link" href="parcourir.php">Tout Parcourir</a></li>
-                <li class="nav-item"><a class="nav-link" href="Recherche.html">Recherche</a></li>
-                <li class="nav-item"><a class="nav-link" href="RDV.html">RDV</a></li>
-                <li class="nav-item"><a class="nav-link" href="account.html"><?php echo $nom ?></a></li>
+                <li class="nav-item"><a class="nav-link" href="recherche.php">Recherche</a></li>
+                <li class="nav-item"><a class="nav-link" href="RDV.php">RDV</a></li>
+                <li class="nav-item"><a class="nav-link" href="account.php"><?php echo $prenom ?></a></li>
             </ul>
         </div>
     </nav>
@@ -95,7 +95,8 @@ if ($stmt->num_rows > 0) {
 <body>
     <div class="coach">
     <h1>Bienvenue, <?php echo $prenom . ' ' . $nom; ?>!</h1>
-    <!-- IF ADMIN, SHOW EVERYTHING -->
+
+        <!-- IF ADMIN, SHOW EVERYTHING -->
     <?php if ($type_utilisateur == 'administrateur') { ?>
         <h2>Vous êtes un administrateur.</h2>
         <a href="admin_users.php">Gérer les utilisateurs</a>
@@ -110,7 +111,11 @@ if ($stmt->num_rows > 0) {
     <?php if ($type_utilisateur == 'client') { ?>
         <h2>Vous êtes un utilisateur.</h2>
         <a href="users/user.php">Voir votre page d'utilisateur</a>
-    <?php } ?>
+    <?php }
+    ?>
+
+        <br>    <a class="nav-link btn btn-danger" href="logout.php">Logout</a>
+
 
     </div>
 </div>

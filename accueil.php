@@ -1,3 +1,20 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['id'])) $connected = false;
+else {
+    $connected = true;
+    // Récupérer les informations de l'utilisateur à partir de la session
+    $id = $_SESSION['id'];
+    $nom = $_SESSION['nom'];
+    $prenom = $_SESSION['prenom'];
+}
+?>
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -13,18 +30,21 @@
 <header>
     <h1>Sportify</h1>
     <nav class="navbar navbar-expand-md">
-        <img class="navbar-brand" src="imgs/acceuil/logo.png" alt="logo" style="width:100px;">
+        <img class="navbar-brand" src="imgs/logo.png" alt="logo" style="width:100px;">
         <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#main-navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="main-navigation">
             <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link" href="accueil.html">Accueil</a></li>
+                <li class="nav-item"><a class="nav-link" href="accueil.php">Accueil</a></li>
                 <li class="nav-item"><a class="nav-link" href="parcourir.php">Tout Parcourir</a></li>
-                <li class="nav-item"><a class="nav-link" href="recherche.html">Recherche</a></li>
-                <li class="nav-item"><a class="nav-link" href="rendezvous.html">RDV</a></li>
-                <li class="nav-item"><a class="nav-link" href="compte.html">Connexion</a></li>
-            </ul>
+                <li class="nav-item"><a class="nav-link" href="recherche.php">Recherche</a></li>
+                <li class="nav-item"><a class="nav-link" href="RDV.php">RDV</a></li>
+                <li class="nav-item">
+                    <a class="nav-link" href="<?php echo $connected ? 'account.php' : 'login.html'; ?>">
+                        <?php echo $connected ? $prenom : 'Connexion'; ?>
+                    </a>
+                </li>
         </div>
     </nav>
 </header>

@@ -2,12 +2,13 @@
 session_start();
 
 if (!isset($_SESSION['id'])) $connected = false;
-else $connected = true;
-
-// Récupérer les informations de l'utilisateur à partir de la session
-$id = $_SESSION['id'];
-$nom = $_SESSION['nom'];
-$prenom = $_SESSION['prenom'];
+else {
+    $connected = true;
+    // Récupérer les informations de l'utilisateur à partir de la session
+    $id = $_SESSION['id'];
+    $nom = $_SESSION['nom'];
+    $prenom = $_SESSION['prenom'];
+}
 ?>
 
 <!DOCTYPE html>
@@ -31,13 +32,13 @@ $prenom = $_SESSION['prenom'];
         </button>
         <div class="collapse navbar-collapse" id="main-navigation">
             <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link" href="accueil.html">Accueil</a></li>
+                <li class="nav-item"><a class="nav-link" href="accueil.php">Accueil</a></li>
                 <li class="nav-item"><a class="nav-link" href="parcourir.php">Tout Parcourir</a></li>
-                <li class="nav-item"><a class="nav-link" href="Recherche.html">Recherche</a></li>
-                <li class="nav-item"><a class="nav-link" href="RDV.html">RDV</a></li>
+                <li class="nav-item"><a class="nav-link" href="recherche.php">Recherche</a></li>
+                <li class="nav-item"><a class="nav-link" href="RDV.php">RDV</a></li>
                 <li class="nav-item">
                     <a class="nav-link" href="<?php echo $connected ? 'account.php' : 'login.php'; ?>">
-                        <?php echo $connected ? $nom : 'Connexion'; ?>
+                        <?php echo $connected ? $prenom : 'Connexion'; ?>
                     </a>
                 </li>
         </div>

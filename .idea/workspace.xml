@@ -4,9 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4eba4a59-222f-49e9-bc1a-3f53622f8b2d" name="Changes" comment="modif">
+    <list default="true" id="4eba4a59-222f-49e9-bc1a-3f53622f8b2d" name="Changes" comment="MEGA UPDATE PHP">
+      <change afterPath="$PROJECT_DIR$/barre_recherche.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accueil.html" beforeDir="false" afterPath="$PROJECT_DIR$/accueil.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RDV annuler.php" beforeDir="false" afterPath="$PROJECT_DIR$/RDV annuler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RDV confirmés.php" beforeDir="false" afterPath="$PROJECT_DIR$/RDV confirmés.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RDV.html" beforeDir="false" afterPath="$PROJECT_DIR$/RDV.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Recherche.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/account.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/account.php" beforeDir="false" afterPath="$PROJECT_DIR$/account.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accueil.html" beforeDir="false" afterPath="$PROJECT_DIR$/accueil.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coachs/coach.php" beforeDir="false" afterPath="$PROJECT_DIR$/coachs/coach.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logout.php" beforeDir="false" afterPath="$PROJECT_DIR$/logout.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/parcourir.php" beforeDir="false" afterPath="$PROJECT_DIR$/parcourir.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recherche.php" beforeDir="false" afterPath="$PROJECT_DIR$/recherche.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/signup.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,12 +38,12 @@
     &quot;assignee&quot;: &quot;carolineolsem&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/carolineolsem/Projet_Web_Dynamique.git&quot;,
-    &quot;accountId&quot;: &quot;5c081f6f-3e99-48ee-b863-bf4bafa45422&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/carolineolsem/Projet_Web_Dynamique.git",
+    "accountId": "d1777ce9-0da2-4933-8c4b-befda8d22e92"
   }
-}</component>
+}]]></component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
@@ -40,33 +53,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "JavaScript Debug.RDV annuler.php.executor": "Run",
-    "JavaScript Debug.RDV.html.executor": "Run",
-    "JavaScript Debug.Recherche.html.executor": "Run",
-    "JavaScript Debug.accueil.html.executor": "Run",
-    "JavaScript Debug.avion.html.executor": "Run",
-    "JavaScript Debug.avion.php.executor": "Run",
-    "JavaScript Debug.parcourir.html.executor": "Run",
-    "PHP Script.avion.php.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/php/php.ini",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JavaScript Debug.RDV annuler.php.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.RDV.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.Recherche.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.accueil.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.avion.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.avion.php.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.parcourir.html.executor&quot;: &quot;Run&quot;,
+    &quot;PHP Script.avion.php.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/php/php.ini&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -87,6 +100,7 @@
       <workItem from="1716990114672" duration="1944000" />
       <workItem from="1716992077983" duration="204000" />
       <workItem from="1716992292493" duration="7283000" />
+      <workItem from="1717141048394" duration="2623000" />
     </task>
     <task id="LOCAL-00001" summary="modifications codes RDV">
       <option name="closed" value="true" />
@@ -144,7 +158,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717077123253</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="MEGA UPDATE PHP">
+      <option name="closed" value="true" />
+      <created>1717087546779</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1717087546779</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -156,7 +178,8 @@
     <MESSAGE value="accueil" />
     <MESSAGE value="modif lien Recherche" />
     <MESSAGE value="modif" />
-    <option name="LAST_COMMIT_MESSAGE" value="modif" />
+    <MESSAGE value="MEGA UPDATE PHP" />
+    <option name="LAST_COMMIT_MESSAGE" value="MEGA UPDATE PHP" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

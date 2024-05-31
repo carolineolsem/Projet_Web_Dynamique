@@ -11,10 +11,9 @@ if ($connexion->connect_error) {
 
 $client_id = 5;
 
-$sql = "SELECT rdv.id, rdv.date_rdv, rdv.heure_debut, rdv.heure_fin, u.nom AS coach_nom, u.prenom AS coach_prenom, a.nom, a.adresse
+$sql = "SELECT rdv.id, rdv.date_rdv, rdv.heure_debut, rdv.heure_fin, u.nom AS coach_nom, u.prenom AS coach_prenom, c.salle
         FROM rendez_vous rdv
         JOIN coachs c ON rdv.coach_id = c.id
-        JOIN activites_sportives a ON rdv.coach_id = a.id
         JOIN utilisateurs u ON c.utilisateur_id = u.id
         WHERE rdv.client_id = $client_id AND rdv.statut = 'confirmé'";
 
@@ -38,7 +37,7 @@ $connexion->close();
 <header>
    <h1>Sportify</h1>
    <nav class="navbar navbar-expand-md">
-       <img class="navbar-brand" src="imgs/acceuil/logo.png" alt="logo" style="width:100px;">
+       <img class="navbar-brand" src="logo.png" alt="logo" style="width:40px;">
        <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#main-navigation">
            <span class="navbar-toggler-icon"></span>
        </button>
@@ -54,7 +53,7 @@ $connexion->close();
    </nav>
 </header>
 <body>
-    <h1>Rendez-vous confirmés</h1>
+    <h1>Rendez-vous Confirmés</h1>
 
     <?php if ($result->num_rows > 0): ?>
         <?php while($row = $result->fetch_assoc()): ?>
@@ -62,8 +61,8 @@ $connexion->close();
                 <div class="rdv-header">Rendez-vous avec <?php echo $row['coach_prenom'] . ' ' . $row['coach_nom']; ?></div>
                 <div class="rdv-details">Date: <?php echo $row['date_rdv']; ?></div>
                 <div class="rdv-details">Heure: <?php echo $row['heure_debut'] . ' - ' . $row['heure_fin']; ?></div>
-                <div class="rdv-details">Adresse: <?php echo $row['adresse']; ?></div>
-                <div class="rdv-details">Sport :<?php echo $row['nom']; ?></div>
+                <div class="rdv-details">Salle: <?php echo $row['salle']; ?></div>
+                <div class="rdv-details">Téléphone:</div>
                 <div class="rdv-details">Document demandé: [Insérer Document]</div>
                 <div class="rdv-details">Digicode: [Insérer Digicode]</div>
                 <form method="post" action="RDV%20annuler.php">
@@ -76,9 +75,7 @@ $connexion->close();
         <p>Aucun rendez-vous confirmé.</p>
     <?php endif; ?>
 </body>
-
 <footer>
-    <p>&copy; 2024 Sportify. Tous droits réservés.</p>
+        <p>&copy; 2024 Sportify. Tous droits réservés.</p>
 </footer>
-
 </html>

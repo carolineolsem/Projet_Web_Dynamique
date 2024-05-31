@@ -32,7 +32,7 @@ else {
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="main-navigation">
-            <ul class="navbar-nav">
+            <li class="navbar-nav">
                 <li class="nav-item"><a class="nav-link" href="accueil.php">Accueil</a></li>
                 <li class="nav-item"><a class="nav-link" href="parcourir.php">Tout Parcourir</a></li>
                 <li class="nav-item"><a class="nav-link" href="recherche.php">Recherche</a></li>
@@ -45,7 +45,7 @@ else {
         </div>
     </nav>
 </header>
-    <h1>Bienvenue sur Sportify</h1>
+    <h1>Rendez-vous confirmés</h1>
     <p>Cliquez sur le bouton ci-dessous pour voir vos rendez-vous confirmés.</p>
     <a href="RDV%20confirmés.php" class="link-button">Voir les Rendez-vous Confirmés</a>
 </body>

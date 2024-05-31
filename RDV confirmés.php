@@ -37,7 +37,7 @@ $connexion->close();
 <header>
    <h1>Sportify</h1>
    <nav class="navbar navbar-expand-md">
-       <img class="navbar-brand" src="logo.png" alt="logo" style="width:40px;">
+       <img class="navbar-brand" src="imgs/acceuil/logo.png" alt="logo" style="width:100px;">
        <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#main-navigation">
            <span class="navbar-toggler-icon"></span>
        </button>
@@ -47,12 +47,11 @@ $connexion->close();
                <li class="nav-item"><a class="nav-link" href="parcourir.php">Tout Parcourir </a></li>
                <li class="nav-item"><a class="nav-link" href="recherche.php">Recherche</a></li>
                <li class="nav-item"><a class="nav-link" href="RDV.php">RDV</a></li>
-               <li class="nav-item"><a class="nav-link" href="compte.html">Connexion</a></li>
+               <li class="nav-item"><a class="nav-link" href="account.php">Connexion</a></li>
            </ul>
        </div>
    </nav>
 </header>
-<body>
     <h1>Rendez-vous Confirmés</h1>
 
     <?php if ($result->num_rows > 0): ?>
@@ -74,8 +73,8 @@ $connexion->close();
     <?php else: ?>
         <p>Aucun rendez-vous confirmé.</p>
     <?php endif; ?>
-</body>
 <footer>
-        <p>&copy; 2024 Sportify. Tous droits réservés.</p>
+    <p>&copy; 2024 Sportify. Tous droits réservés.</p>
 </footer>
+</body>
 </html>

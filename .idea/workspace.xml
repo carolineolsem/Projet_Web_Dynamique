@@ -8,6 +8,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RDV confirmés.php" beforeDir="false" afterPath="$PROJECT_DIR$/RDV confirmés.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RDV.php" beforeDir="false" afterPath="$PROJECT_DIR$/RDV.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/parcourir.css" beforeDir="false" afterPath="$PROJECT_DIR$/parcourir.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/parcourir.php" beforeDir="false" afterPath="$PROJECT_DIR$/parcourir.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +53,7 @@
     "JavaScript Debug.avion.php.executor": "Run",
     "JavaScript Debug.login.html.executor": "Run",
     "JavaScript Debug.parcourir.html.executor": "Run",
+    "JavaScript Debug.signup.html.executor": "Run",
     "PHP Script.avion.php.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
@@ -146,7 +149,23 @@
       <option name="project" value="LOCAL" />
       <updated>1717077123253</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="modif">
+      <option name="closed" value="true" />
+      <created>1717166679815</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1717166679815</updated>
+    </task>
+    <task id="LOCAL-00009" summary="modif">
+      <option name="closed" value="true" />
+      <created>1717166837870</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1717166837870</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

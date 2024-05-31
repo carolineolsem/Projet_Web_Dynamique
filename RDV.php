@@ -37,10 +37,8 @@ else {
                 <li class="nav-item"><a class="nav-link" href="parcourir.php">Tout Parcourir</a></li>
                 <li class="nav-item"><a class="nav-link" href="recherche.php">Recherche</a></li>
                 <li class="nav-item"><a class="nav-link" href="RDV.php">RDV</a></li>
-                <li class="nav-item"><a class="nav-link" href="compte.html">Connexion</a></li>
-                    <a class="nav-link" href="<?php echo $connected ? 'account.php' : 'login.html'; ?>">
-                        <?php echo $connected ? $prenom : 'Connexion'; ?>
-                    </a>
+                <li class="nav-item"><a class="nav-link" href="<?php echo $connected ? 'account.php' : 'login.html'; ?>">
+                        <?php echo $connected ? $prenom : 'Connexion'; ?></a></li>
                 </ul>
         </div>
     </nav>
@@ -48,9 +46,6 @@ else {
     <h1>Rendez-vous confirmés</h1>
     <p>Cliquez sur le bouton ci-dessous pour voir vos rendez-vous confirmés.</p>
     <a href="RDV%20confirmés.php" class="link-button">Voir les Rendez-vous Confirmés</a>
-</body>
-<footer>
-        <p>&copy; 2024 Sportify. Tous droits réservés.</p>
-</footer>
+
 </body>
 </html>

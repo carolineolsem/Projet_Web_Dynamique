@@ -43,6 +43,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 coachs.specialite, 
                 coachs.photo, 
                 coachs.cv, 
+                coachs.id,
                 disponibilites.jour, 
                 disponibilites.heure_debut, 
                 disponibilites.heure_fin
@@ -141,6 +142,7 @@ $connexion->close();
                 echo "<p><a href='" . $coach_info["cv"] . "' target='_blank'>Voir le CV</a></p>";
             }
             ?>
+
         </div>
     </div>
     <div class="horraires">
@@ -166,6 +168,7 @@ $connexion->close();
                 ?>
             </tr>
         </table>
+        <a href="../prendre_RDV.php?coach_id=<?php echo $coach_info['id']; ?>" class="btn btn-primary RDV" style="background-color: #39c82d; border-color: #39c82d">Prendre RDV</a>        <a href="chatcoach.php" class="btn btn-secondary CHAT" style="background-color: #0c76af; border-color: #0c76af">Communiquer</a>
     </div>
 </div>
 </body>

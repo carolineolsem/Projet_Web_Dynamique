@@ -1,7 +1,10 @@
 <?php
 session_start();
 
-if (!isset($_SESSION['id'])) $connected = false;
+if (!isset($_SESSION['id'])) {
+    $connected = false;
+    header("Location: login.html");
+}
 else {
     $connected = true;
     // Récupérer les informations de l'utilisateur à partir de la session

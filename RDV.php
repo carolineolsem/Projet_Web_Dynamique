@@ -32,7 +32,7 @@ else {
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="main-navigation">
-            <li class="navbar-nav">
+            <ul class="navbar-nav">
                 <li class="nav-item"><a class="nav-link" href="accueil.php">Accueil</a></li>
                 <li class="nav-item"><a class="nav-link" href="parcourir.php">Tout Parcourir</a></li>
                 <li class="nav-item"><a class="nav-link" href="recherche.php">Recherche</a></li>
@@ -41,7 +41,7 @@ else {
                     <a class="nav-link" href="<?php echo $connected ? 'account.php' : 'login.html'; ?>">
                         <?php echo $connected ? $prenom : 'Connexion'; ?>
                     </a>
-                </li>
+                </ul>
         </div>
     </nav>
 </header>

@@ -1,0 +1,47 @@
+<?php
+session_start();
+
+// Vérifier si l'utilisateur est connecté
+if (!isset($_SESSION['id'])) {
+    http_response_code(403);
+    echo json_encode(['error' => 'Utilisateur non connecté']);
+    exit;
+}
+
+/// Connexion à la base de données
+//$serveur = "sportify.mysql.database.azure.com";
+//$utilisateur = "ece";
+//$motdepasse = "Sportify!";
+//$basededonnees = "sportify";
+//$port = 3306;
+
+//$connexion = new mysqli($serveur, $utilisateur, $motdepasse, $basededonnees, $port);
+
+//if ($connexion->connect_error) {
+//    die("Échec de la connexion à la base de données : " . $connexion->connect_error);
+//}
+
+// Identifier le nom de la base de données
+$database = "Sportify";
+
+// Se connecter à la base de données
+$db_handle = mysqli_connect('localhost', 'root', '');
+$db_found = mysqli_select_db($db_handle, $database);
+
+
+// Récupérer l'ID de l'utilisateur connecté
+$utilisateur_id = $_SESSION['id'];
+
+// Récupérer les messages pour l'utilisateur connecté
+$sql = 'SELECT * FROM messages WHERE expediteur_id = ? OR destinataire_id = ?';
+$stmt = $connexion->prepare($sql);
+$stmt->bind_param('ii', $utilisateur_id, $utilisateur_id);
+$stmt->execute();
+$result = $stmt->get_result();
+$messages = $result->fetch_all(MYSQLI_ASSOC);
+
+echo json_encode($messages);
+
+$stmt->close();
+$connexion->close();
+?>

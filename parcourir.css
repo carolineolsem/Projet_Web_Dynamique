@@ -58,7 +58,14 @@ button {
     cursor: pointer;
     padding: 0;
     color: white;
+}
 
-
-
+footer {
+    background-color: #007179;
+    color: #FAF0CA;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    width: 100%;
+    bottom: 0;
 }

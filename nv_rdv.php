@@ -3,17 +3,13 @@ session_start();
 
 if (!isset($_SESSION['id'])) {
     $connected = false;
-    header("Location: login.html");
-}
-else {
+} else {
     $connected = true;
-    // Récupérer les informations de l'utilisateur à partir de la session
     $id = $_SESSION['id'];
     $nom = $_SESSION['nom'];
     $prenom = $_SESSION['prenom'];
 }
 ?>
-
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -39,16 +35,23 @@ else {
                 <li class="nav-item"><a class="nav-link" href="accueil.php">Accueil</a></li>
                 <li class="nav-item"><a class="nav-link" href="parcourir.php">Tout Parcourir</a></li>
                 <li class="nav-item"><a class="nav-link" href="recherche.php">Recherche</a></li>
-                <li class="nav-item"><a class="nav-link" href="RDV.php">RDV</a></li>
+                <li class="nav-item"><a class="nav-link" href="rdv.php">RDV</a></li>
                 <li class="nav-item"><a class="nav-link" href="<?php echo $connected ? 'account.php' : 'login.html'; ?>">
                         <?php echo $connected ? $prenom : 'Connexion'; ?></a></li>
                 </ul>
         </div>
     </nav>
 </header>
-    <h1>Rendez-vous confirmés</h1>
+<main>
+    <h1>Rendez-vous</h1>
     <p>Cliquez sur le bouton ci-dessous pour voir vos rendez-vous confirmés.</p>
-    <a href="RDV%20confirmés.php" class="link-button">Voir les Rendez-vous Confirmés</a>
+    <a href="rdv_confirmes.php" class="link-button">Voir les Rendez-vous Confirmés</a>
 
+    <p>Cliquez sur le bouton ci-dessous pour prendre un nouveau rendez-vous.</p>
+    <a href="ajouter_rdv.html" class="link-button">Prendre un Rendez-vous</a>
+</main>
+<footer>
+    <p>&copy; 2024 Sportify. Tous droits réservés.</p>
+</footer>
 </body>
 </html>

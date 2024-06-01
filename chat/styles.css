@@ -4,10 +4,15 @@
     box-sizing: border-box;
 }
 
+.mega_chat {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 body {
     background: #C5DDEB;
     font: 14px/20px "Lato", Arial, sans-serif;
-    color: white;
 }
 
 .container {
@@ -18,8 +23,8 @@ body {
 }
 
 .people-list {
-    width:260px;
-    float: left;
+    width:600px;
+    float: none;
 
     .search {
         padding: 20px;
@@ -74,8 +79,9 @@ body {
 }
 
 .chat {
-    width: 490px;
-    float:left;
+    width: 40%;
+    justify-content: center;
+    align-items: center;
     background: #F2F5F8;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;

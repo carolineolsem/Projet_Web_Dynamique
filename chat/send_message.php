@@ -2,11 +2,9 @@
 session_start();
 
 if (!isset($_SESSION['id'])) {
-    header("Location: login.html");
-    exit();
+    // Si l'utilisateur n'est pas connecté, redirigez-le vers la page de connexion
+    header("Location: ../login.html");
 }
-
-$id = $_SESSION['id'];
 
 $serveur = "sportify.mysql.database.azure.com";
 $utilisateur = "ece";
@@ -20,22 +18,17 @@ if ($connexion->connect_error) {
     die("Connection failed: " . $connexion->connect_error);
 }
 
-$message = $_POST['message'];
-$time = date('Y-m-d H:i:s');
+$expediteur_id = $_POST['expediteur_id'];
 $destinataire_id = $_POST['destinataire_id'];
-$type_message = $_POST['type_message'];
+$contenu = $_POST['contenu'];
 
-$sql = "INSERT INTO messages (expediteur_id, destinataire_id, contenu, date_envoi, type_message) VALUES (?, ?, ?, ?, ?)";
+// Récupérer la date et l'heure actuelles et ajouter 2 heures
+$date_envoi = date('Y-m-d H:i:s', strtotime('+2 hours'));
+
+$sql = "INSERT INTO messages (expediteur_id, destinataire_id, contenu, date_envoi) VALUES (?, ?, ?, ?)";
 $stmt = $connexion->prepare($sql);
-$stmt->bind_param("iissi", $id, $destinataire_id, $message, $time, $type_message);
+$stmt->bind_param("iiss", $expediteur_id, $destinataire_id, $contenu, $date_envoi);
 $stmt->execute();
 
-if ($stmt->execute()) {
-    echo "New record created successfully";
-} else {
-    echo "Error: " . $stmt->error;
-}
-
-$stmt->close();
-$connexion->close();
+header("Location: get_all_messages.php?coach_id=" . $destinataire_id);
 ?>

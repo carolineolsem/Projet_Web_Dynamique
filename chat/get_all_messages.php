@@ -73,7 +73,7 @@ if (isset($_GET['coach_id'])) {
         </div>
     </nav>
 </header>
-<body style="justify-content: center">
+<body style="justify-content: center; background-color: #F2F5F8">
 <div class="mega_chat" style="justify-content: center">
 <div class="chat">
     <div class="chat-history">
@@ -145,10 +145,12 @@ if (isset($_GET['coach_id'])) {
         </ul>
     </div>
     <div class="chat-message clearfix">
-        <textarea name="message-to-send" id="message-to-send" placeholder="Type your message" rows="3"></textarea>
-        <i class="fa fa-file-o"></i> &nbsp;&nbsp;&nbsp;
-        <i class="fa fa-file-image-o"></i>
-        <button id="send">Send</button>
+        <form action="send_message.php" method="post">
+            <input type="hidden" name="expediteur_id" value="<?php echo $id; ?>">
+            <input type="hidden" name="destinataire_id" value="<?php echo $cible_id; ?>">
+            <textarea name="contenu" id="message-to-send" placeholder="Type your message" rows="3"></textarea>
+            <button type="submit" id="send">Send</button>
+        </form
     </div>
 </div>
 </body>

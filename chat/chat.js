@@ -190,6 +190,20 @@
         loadUsers();
     });
 
+    $(document).ready(function() {
+        // Exécute cette fonction toutes les 5 secondes
+        setInterval(function() {
+            $.ajax({
+                url: 'get_all_messages.php', // L'URL de votre script PHP qui récupère les messages
+                type: 'get',
+                success: function(data) {
+                    // Mettez à jour le contenu de votre élément de chat avec les nouveaux messages
+                    $('.chat-history ul').html(data);
+                }
+            });
+        }, 5000);
+    });
+
 
 
 

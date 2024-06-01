@@ -62,6 +62,10 @@ th, td {
     text-align: center;
 }
 
+li {
+    list-style-type: none;
+
+}
 .coach {
     display: flex;
     flex-direction: column;

@@ -4,20 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4eba4a59-222f-49e9-bc1a-3f53622f8b2d" name="Changes" comment="RDV FAIT">
-      <change afterPath="$PROJECT_DIR$/chat/chat.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/chat.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/fetch_messages.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/fetch_users_talked_to.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/get_all_messages.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/send_message.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/styles.css" afterDir="false" />
+    <list default="true" id="4eba4a59-222f-49e9-bc1a-3f53622f8b2d" name="Changes" comment="CHAT BETA">
       <change beforePath="$PROJECT_DIR$/.idea/Projet_Web_Dynamique.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Projet_Web_Dynamique.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/account.php" beforeDir="false" afterPath="$PROJECT_DIR$/account.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/chat.js" beforeDir="false" afterPath="$PROJECT_DIR$/chat/chat.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/get_all_messages.php" beforeDir="false" afterPath="$PROJECT_DIR$/chat/get_all_messages.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/send_message.php" beforeDir="false" afterPath="$PROJECT_DIR$/chat/send_message.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/chat/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/coachs/coach.php" beforeDir="false" afterPath="$PROJECT_DIR$/coachs/coach.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/get_destinataires.php" beforeDir="false" afterPath="$PROJECT_DIR$/get_destinataires.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/signup.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coachs/styles_coach.css" beforeDir="false" afterPath="$PROJECT_DIR$/coachs/styles_coach.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,7 +104,7 @@
       <workItem from="1716992077983" duration="204000" />
       <workItem from="1716992292493" duration="7283000" />
       <workItem from="1717141048394" duration="2623000" />
-      <workItem from="1717255389835" duration="8378000" />
+      <workItem from="1717255389835" duration="9486000" />
     </task>
     <task id="LOCAL-00001" summary="modifications codes RDV">
       <option name="closed" value="true" />
@@ -175,7 +170,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717087546779</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="CHAT BETA">
+      <option name="closed" value="true" />
+      <created>1717264149295</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1717264149295</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -199,7 +202,8 @@
     <MESSAGE value="modif lien Recherche" />
     <MESSAGE value="modif" />
     <MESSAGE value="MEGA UPDATE PHP" />
-    <option name="LAST_COMMIT_MESSAGE" value="MEGA UPDATE PHP" />
+    <MESSAGE value="CHAT BETA" />
+    <option name="LAST_COMMIT_MESSAGE" value="CHAT BETA" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

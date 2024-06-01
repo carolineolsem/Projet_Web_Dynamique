@@ -1,23 +1,18 @@
 <?php
-/// Connexion à la base de données
-//$serveur = "sportify.mysql.database.azure.com";
-//$utilisateur = "ece";
-//$motdepasse = "Sportify!";
-//$basededonnees = "sportify";
-//$port = 3306;
+// Connexion à la base de données
+$serveur = "sportify.mysql.database.azure.com";
+$utilisateur = "ece";
+$motdepasse = "Sportify!";
+$basededonnees = "sportify";
+$port = 3306;
 
-//$connexion = new mysqli($serveur, $utilisateur, $motdepasse, $basededonnees, $port);
+$connexion = new mysqli($serveur, $utilisateur, $motdepasse, $basededonnees, $port);
 
-//if ($connexion->connect_error) {
-//    die("Échec de la connexion à la base de données : " . $connexion->connect_error);
-//}
+if ($connexion->connect_error) {
+    die("Échec de la connexion à la base de données : " . $connexion->connect_error);
+}
 
-// Identifier le nom de la base de données
-$database = "Sportify";
 
-// Se connecter à la base de données
-$db_handle = mysqli_connect('localhost', 'root', '');
-$db_found = mysqli_select_db($db_handle, $database);
 
 
 // Fonction pour récupérer la liste des destinataires disponibles

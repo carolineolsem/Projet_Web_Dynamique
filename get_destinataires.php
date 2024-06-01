@@ -17,12 +17,12 @@ if ($connexion->connect_error) {
 
 // Fonction pour récupérer la liste des destinataires disponibles
 function getDestinataires($type_utilisateur) {
-    global $conn;
+    global $connexion;
     $destinataires = array();
 
     // Sélectionnez les utilisateurs en fonction du type (clients ou coachs)
     $sql = "SELECT id, nom, prenom FROM utilisateurs WHERE type_utilisateur = '$type_utilisateur'";
-    $result = $conn->query($sql);
+    $result = $connexion->query($sql);
 
     if ($result->num_rows > 0) {
         while($row = $result->fetch_assoc()) {

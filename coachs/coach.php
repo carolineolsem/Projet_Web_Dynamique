@@ -168,7 +168,7 @@ $connexion->close();
                 ?>
             </tr>
         </table>
-        <a href="../prendre_RDV.php?coach_id=<?php echo $coach_info['id']; ?>" class="btn btn-primary RDV" style="background-color: #39c82d; border-color: #39c82d">Prendre RDV</a>        <a href="chatcoach.php" class="btn btn-secondary CHAT" style="background-color: #0c76af; border-color: #0c76af">Communiquer</a>
+        <a href="../prendre_RDV.php?coach_id=<?php echo $coach_info['id']; ?>" class="btn btn-primary RDV" style="background-color: #39c82d; border-color: #39c82d">Prendre RDV</a>        <a href="../chat/get_all_messages.php?coach_id=<?php echo $coach_info['id']; ?>" class="btn btn-secondary CHAT" style="background-color: #0c76af; border-color: #0c76af">Communiquer</a>
     </div>
 </div>
 </body>

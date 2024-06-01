@@ -122,7 +122,3 @@ if ($stmt->num_rows > 0) {
 </body>
 </html>
 
-
-<!-- Votre autre HTML ici -->
-</body>
-</html>

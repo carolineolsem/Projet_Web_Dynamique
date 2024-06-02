@@ -5,14 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4eba4a59-222f-49e9-bc1a-3f53622f8b2d" name="Changes" comment="CHAT BETA">
-      <change beforePath="$PROJECT_DIR$/.idea/Projet_Web_Dynamique.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Projet_Web_Dynamique.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/imgs/coachs/alfred.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/imgs/coachs/bamba.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/imgs/coachs/beth.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/imgs/coachs/david.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/imgs/coachs/marie.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/imgs/coachs/nicolas.d.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/imgs/coachs/nicolas.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/imgs/coachs/pierre.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/imgs/coachs/quentin.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/imgs/coachs/rachid.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/imgs/coachs/thomas.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/chat.js" beforeDir="false" afterPath="$PROJECT_DIR$/chat/chat.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/get_all_messages.php" beforeDir="false" afterPath="$PROJECT_DIR$/chat/get_all_messages.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/send_message.php" beforeDir="false" afterPath="$PROJECT_DIR$/chat/send_message.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/chat/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coachs/coach.php" beforeDir="false" afterPath="$PROJECT_DIR$/coachs/coach.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coachs/styles_coach.css" beforeDir="false" afterPath="$PROJECT_DIR$/coachs/styles_coach.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imgs/coachs/allain_phillipe.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imgs/coachs/gali_pette.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imgs/coachs/guy_dumais.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imgs/coachs/jane_doe.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imgs/coachs/john_smith.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imgs/coachs/lea_dousse.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imgs/coachs/marin_deaudouce.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imgs/coachs/pierre_boulet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imgs/coachs/samanta_keur.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imgs/coachs/sun_shine.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imgs/coachs/tousse_ensemble.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,12 +54,12 @@
     &quot;assignee&quot;: &quot;carolineolsem&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/carolineolsem/Projet_Web_Dynamique.git&quot;,
-    &quot;accountId&quot;: &quot;d1777ce9-0da2-4933-8c4b-befda8d22e92&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/carolineolsem/Projet_Web_Dynamique.git",
+    "accountId": "5c081f6f-3e99-48ee-b863-bf4bafa45422"
   }
-}</component>
+}]]></component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
@@ -62,6 +77,7 @@
     "JavaScript Debug.accueil.html.executor": "Run",
     "JavaScript Debug.avion.html.executor": "Run",
     "JavaScript Debug.avion.php.executor": "Run",
+    "JavaScript Debug.login.html.executor": "Run",
     "JavaScript Debug.parcourir.html.executor": "Run",
     "PHP Script.avion.php.executor": "Run",
     "PHP Script.chat.php.executor": "Run",
@@ -83,6 +99,11 @@
     ]
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\carol\PhpstormProjects\Projet_Web_Dynamique\imgs\coachs" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>

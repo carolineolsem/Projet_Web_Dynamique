@@ -12,7 +12,6 @@ $id = $_SESSION['id'];
 $nom = $_SESSION['nom'];
 $prenom = $_SESSION['prenom'];
 
-// GET ALL INFOS FROM USER (NOM PRENOM EMAIL)
 $serveur = "sportify.mysql.database.azure.com";
 $utilisateur = "ece";
 $motdepasse = "Sportify!";
@@ -39,7 +38,6 @@ if ($stmt->num_rows > 0) {
     exit();
 }
 
-// GET type_utilisateur
 $sql = "SELECT type_utilisateur FROM utilisateurs WHERE id = ?";
 $stmt = $connexion->prepare($sql);
 $stmt->bind_param("i", $id);
@@ -95,7 +93,6 @@ if ($stmt->num_rows > 0) {
     <div class="user_info">
     <h1>Bienvenue, <?php echo $prenom . ' ' . $nom; ?>!</h1>
 
-        <!-- IF ADMIN, SHOW EVERYTHING -->
     <?php if ($type_utilisateur == 'administrateur') { ?>
         <h2>Vous êtes un administrateur.</h2>
         <p> Nom : <?php echo $nom; ?> </p>
@@ -104,7 +101,6 @@ if ($stmt->num_rows > 0) {
         <a class="nav-link btn btn-info" style="margin-bottom: 5px" href="admin_users.php">Gérer les utilisateurs</a>
         <a class="nav-link btn btn-info" href="admin_coachs.php">Gérer les coachs</a>
     <?php } ?>
-    <!-- IF COACH, SHOW COACH PAGE -->
     <?php if ($type_utilisateur == 'coach') { ?>
         <h2>Vous êtes un coach.</h2>
         <p> Nom : <?php echo $nom; ?> </p>
@@ -112,9 +108,9 @@ if ($stmt->num_rows > 0) {
         <p> Email : <?php echo $email; ?> </p>
 
     <?php } ?>
-    <!-- IF USER, SHOW USER PAGE -->
+
     <?php if ($type_utilisateur == 'client') { ?>
-        <h2>Vous êtes un utilisateur.</h2>
+        <h2>Vous êtes un client.</h2>
         <p> Nom : <?php echo $nom; ?> </p>
         <p> Prénom : <?php echo $prenom; ?> </p>
         <p> Email : <?php echo $email; ?> </p>
@@ -153,7 +149,6 @@ if ($stmt->num_rows > 0) {
 
 
                     foreach ($rdv_info as $rdv) {
-                        //GET NOM PRENOM CLIENT
                         $sql = "SELECT nom, prenom FROM utilisateurs WHERE id = ?";
                         $stmt = $connexion->prepare($sql);
                         $stmt->bind_param("i", $rdv['client_id']);

@@ -1,14 +1,11 @@
 <?php
 session_start();
 
-// Check if the user is logged in and is an admin
 if (!isset($_SESSION['id']) || $_SESSION['type_utilisateur'] != 'administrateur') {
-    // If the user is not logged in or is not an admin, redirect them to the login page
     header("Location: login.php");
     exit();
 }
 
-// Récupérer les informations de l'utilisateur à partir de la session
 $id = $_SESSION['id'];
 $nom = $_SESSION['nom'];
 $prenom = $_SESSION['prenom'];

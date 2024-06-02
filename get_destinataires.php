@@ -14,7 +14,6 @@ if ($connexion->connect_error) {
 
 
 
-
 // Fonction pour récupérer la liste des destinataires disponibles
 function getDestinataires($type_utilisateur) {
     global $connexion;

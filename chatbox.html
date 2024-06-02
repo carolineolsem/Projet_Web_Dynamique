@@ -42,7 +42,6 @@ if (!isset($_SESSION['id'])) {
             <h2>Messagerie</h2>
             <p>Bonjour, <?php echo $_SESSION['nom'] . " " . $_SESSION['prenom']; ?>!</p>
             <div id="message-container">
-                <!-- Les messages seront affichés ici -->
                 <div class="message">Message content</div>
             </div>
             <form id="message-form">
@@ -50,7 +49,6 @@ if (!isset($_SESSION['id'])) {
                 <div class="form-group">
                     <label for="destinataire_id">Destinataire</label>
                     <select id="destinataire_id" class="form-control">
-                        <!-- Options peuplées dynamiquement via PHP -->
                     </select>
                 </div>
                 <div class="form-group">

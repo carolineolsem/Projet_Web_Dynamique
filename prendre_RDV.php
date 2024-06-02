@@ -24,7 +24,6 @@ if ($connexion->connect_error) {
     die("Échec de la connexion à la base de données : " . $connexion->connect_error);
 }
 
-// Fetch coach availability
 $sql_availability = "SELECT jour, heure_debut, heure_fin FROM disponibilites WHERE coach_id = ?";
 $stmt_availability = $connexion->prepare($sql_availability);
 $stmt_availability->bind_param("i", $coach_id);
@@ -37,7 +36,6 @@ while ($stmt_availability->fetch()) {
 }
 $stmt_availability->close();
 
-// Fetch booked appointments
 $sql_bookings = "SELECT jour, heure_debut, heure_fin FROM rendez_vous WHERE coach_id = ?";
 $stmt_bookings = $connexion->prepare($sql_bookings);
 $stmt_bookings->bind_param("i", $coach_id);

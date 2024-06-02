@@ -9,6 +9,13 @@ if (isset($_GET['coach_id'])) {
     $cible_id = $_GET['coach_id'];
     // Vous pouvez maintenant utiliser $coach_id
 }
+
+//utilisateur_id=
+if (isset($_GET['utilisateur_id'])) {
+    $cible_id = $_GET['utilisateur_id'];
+    // Vous pouvez maintenant utiliser $coach_id
+}
+
 // Récupérer les informations de l'utilisateur à partir de la session
 $id = $_SESSION['id'];
 $nom = $_SESSION['nom'];
@@ -28,6 +35,17 @@ if ($connexion->connect_error) {
 
 if (isset($_GET['coach_id'])) {
     $cible_id = $_GET['coach_id'];
+    $sql = "SELECT nom, prenom FROM utilisateurs WHERE id = ?";
+    $stmt = $connexion->prepare($sql);
+    $stmt->bind_param("i", $cible_id);
+    $stmt->execute();
+    $stmt->bind_result($nom_cible, $prenom_cible);
+    $stmt->fetch();
+    $stmt->free_result();
+}
+
+if (isset($_GET['utilisateur_id'])) {
+    $cible_id = $_GET['utilisateur_id'];
     $sql = "SELECT nom, prenom FROM utilisateurs WHERE id = ?";
     $stmt = $connexion->prepare($sql);
     $stmt->bind_param("i", $cible_id);

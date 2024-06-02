@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST['email'];
     $password = $_POST['password'];
 
-    $sql = "SELECT id, nom, prenom FROM utilisateurs WHERE email = ? AND mot_de_passe = ?";
+    $sql = "SELECT id, nom, prenom, type_utilisateur FROM utilisateurs WHERE email = ? AND mot_de_passe = ?";
     $stmt = $connexion->prepare($sql);
     if ($stmt === false) {
         die("Erreur lors de la préparation de la requête : " . $connexion->error);
@@ -28,11 +28,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->store_result();
 
     if ($stmt->num_rows > 0) {
-        $stmt->bind_result($id, $nom, $prenom);
+        $stmt->bind_result($id, $nom, $prenom, $type_utilisateur);
         $stmt->fetch();
         $_SESSION['id'] = $id;
         $_SESSION['nom'] = $nom;
         $_SESSION['prenom'] = $prenom;
+        $_SESSION['email'] = $email;
+        $_SESSION['type_utilisateur'] = $type_utilisateur;
         header("Location: account.php");
         exit();
     } else {

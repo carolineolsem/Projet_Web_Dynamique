@@ -65,7 +65,7 @@ if ($stmt->num_rows > 0) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RDV - Sportify</title>
-    <link rel="stylesheet" href="coachs/styles_coach.css">
+    <link rel="stylesheet" href="accountstyle.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
@@ -92,8 +92,7 @@ if ($stmt->num_rows > 0) {
         </div>
     </nav>
 </header>
-<body>
-    <div class="coach">
+    <div class="user_info">
     <h1>Bienvenue, <?php echo $prenom . ' ' . $nom; ?>!</h1>
 
         <!-- IF ADMIN, SHOW EVERYTHING -->
@@ -115,10 +114,80 @@ if ($stmt->num_rows > 0) {
     ?>
 
         <br>    <a class="nav-link btn btn-danger" href="logout.php">Logout</a>
-
-
     </div>
+    <div class="container clearfix" style="width: 30%">
+        <div class="people-list" id="people-list" ">
+            <div class="search" style="width: 85%">
+                <input type="text" placeholder="search" />
+                <i class="fa fa-search"></i>
+            </div>
+            <ul class="list">
+                <!-- Liste des utilisateurs, à remplir dynamiquement -->
+                <!-- APPELER fetch_users_talked_to.php POUR REMPLIR CETTE LISTE -->
+                <?php
+                // Obtenir les utilisateurs avec qui l'utilisateur a parlé
+                $sql = "SELECT DISTINCT expediteur_id, destinataire_id FROM messages WHERE expediteur_id = ? OR destinataire_id = ?";
+                $stmt = $connexion->prepare($sql);
+                $stmt->bind_param("ii", $id, $id);
+                $stmt->execute();
+                $result = $stmt->get_result();
+
+                $people_ids = [];
+                while ($row = $result->fetch_assoc()) {
+                    if ($row['expediteur_id'] != $id) {
+                        $people_ids[] = $row['expediteur_id'];
+                    }
+                    if ($row['destinataire_id'] != $id) {
+                        $people_ids[] = $row['destinataire_id'];
+                    }
+                }
+
+                // Récupérer les informations des utilisateurs
+                $people_ids = array_unique($people_ids);
+                $people_info = [];
+                foreach ($people_ids as $user_id) {
+                    $sql = "SELECT id, nom, prenom, type_utilisateur FROM utilisateurs WHERE id = ?";
+                    $stmt = $connexion->prepare($sql);
+                    $stmt->bind_param("i", $user_id);
+                    $stmt->execute();
+                    $result = $stmt->get_result();
+                    if ($row = $result->fetch_assoc()) {
+                        $people_info[] = $row;
+                    }
+                }
+
+                // Afficher les utilisateurs
+
+                foreach ($people_info as $person) {
+                    // Définir la classe CSS en fonction du type d'utilisateur
+                    $user_class = '';
+                    if ($person['type_utilisateur'] == 'coach') {
+                        $user_class = 'user-green';
+                    } elseif ($person['type_utilisateur'] == 'administrateur') {
+                        $user_class = 'admin-red';
+                    } else {
+                        $user_class = 'user-grey';
+                    }
+
+                    echo '<li class="clearfix" style="width: 50%;" onclick="redirectToChat(' . $person['id'] . ')">
+        <div class="about">
+            <div class="name ' . $user_class . '">' . $person['prenom'] . ' ' . $person['nom'] . '</div>
+            <div class="status">
+                <i class="fa fa-circle online"></i> <div>' . $person['type_utilisateur'] . '</div>
+            </div>
+        </div>
+    </li>';
+                }
+                ?>
+
+            </ul>
+        </div>
 </div>
+<script type="text/javascript">
+    function redirectToChat(userId) {
+        window.location.href = 'chat/get_all_messages.php?utilisateur_id=' + userId;
+    }
+</script>
 </body>
 </html>
 

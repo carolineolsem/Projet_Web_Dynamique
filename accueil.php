@@ -49,6 +49,14 @@ else {
     </nav>
 </header>
 
+<br/>
+<div id="Présentation" class="container">
+    <h2>Présentation</h2>
+    <p> Bienvenue sur Sportify!
+        Sur ce site, vous trouverez toutes les activités sportives que nous proposons, ainsi que les évènements que nous organisons.
+        N'hésite pas à prendre rendez-vous avec l'un de nos coachs agréés, ou bien contacte-nous pour plus d'informations!</p>
+</div>
+
 <div class="carousel-container">
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
@@ -119,11 +127,11 @@ else {
         </div>
     </section>
 
-    <section id="actualites">
-        <h2>Actualités</h2>
-        <p>Découvrez les dernières nouvelles et mises à jour de Sportify.</p>
-        <!-- Ajouter les actualités ici -->
-    </section>
+    <div id="Nous retrouver" class="container">
+        <h2>Nous retrouver</h2>
+        <p>Vous trouverez nos locaux à l'Ecole Centrale d'Electronique à Paris, comme indiqué sur le plan ci-dessous. Venez nous rencontrer et créer votre dossier sportif!</p>
+    </div>
+
 
     <section id="Maps">
         <div id="map">
@@ -133,8 +141,17 @@ else {
     </section>
 
 </main>
-
-
+<div id="coordonnees-responsables" class="container">
+    <h2>Coordonnées des responsables</h2>
+    <p>
+        Pour toute question ou assistance, veuillez contacter notre équipe :
+    </p>
+    <ul>
+        <li><strong>Responsable de la salle de sport :</strong> Jean Dupont - <a href="mailto:jean.dupont@example.com">jean.dupont@example.com</a></li>
+        <li><strong>Entraîneur en chef :</strong> Marie Curie - <a href="mailto:marie.curie@example.com">marie.curie@example.com</a></li>
+        <li><strong>Service clientèle :</strong> 01 23 45 67 89</li>
+    </ul>
+</div>
 
 <footer>
     <p>&copy; 2024 Sportify. Tous droits réservés.</p>

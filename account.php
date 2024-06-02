@@ -100,6 +100,7 @@ if ($stmt->num_rows > 0) {
         <p> Email : <?php echo $email; ?> </p>
         <a class="nav-link btn btn-info" style="margin-bottom: 5px" href="admin_users.php">Gérer les utilisateurs</a>
         <a class="nav-link btn btn-info" href="admin_coachs.php">Gérer les coachs</a>
+        <a class="nav-link btn btn-info" href="admin_form_admin.php">Ajouter un administrateur</a>
     <?php } ?>
     <?php if ($type_utilisateur == 'coach') { ?>
         <h2>Vous êtes un coach.</h2>

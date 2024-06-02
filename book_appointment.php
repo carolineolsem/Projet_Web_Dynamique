@@ -37,6 +37,24 @@ $format = $date->format('Y-m-d');
 $stmt->bind_param("iissss", $user_id, $coach_id, $format, $time, $day, $end_time);
 $stmt->execute();
 
+//GET NAME OF COACH AND SPECIALITY
+$sql = "SELECT id, specialite FROM coachs WHERE id = ?";
+$stmt = $connexion->prepare($sql);
+$stmt->bind_param("i", $coach_id);
+$stmt->execute();
+$stmt->store_result();
+$stmt->bind_result($coach_user_id,$speciality);
+$stmt->fetch();
+
+
+$sql = "INSERT INTO messages (expediteur_id, destinataire_id, contenu, date_envoi, type_message) VALUES (?, ?, ?, NOW(), 'texto')";
+$stmt = $connexion->prepare($sql);
+$admin_id = 0;  // ID de l'administrateur
+
+$welcomeMessage = "Votre RDV de " . $speciality ." a été enregistré pour le " . $day . " à " . $time . ". Merci de votre confiance.";
+$stmt->bind_param("iis", $admin_id, $user_id, $welcomeMessage);
+$stmt->execute();
+
 $stmt->close();
 $connexion->close();
 

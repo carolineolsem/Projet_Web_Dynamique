@@ -80,6 +80,7 @@ body {
 
 .chat {
     width: 40%;
+    height: 70%;
     justify-content: center;
     align-items: center;
     background: #F2F5F8;

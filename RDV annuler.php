@@ -1,4 +1,16 @@
 <?php
+
+session_start();
+
+if (!isset($_SESSION['id'])) $connected = false;
+else {
+    $connected = true;
+    // Récupérer les informations de l'utilisateur à partir de la session
+    $id = $_SESSION['id'];
+    $nom = $_SESSION['nom'];
+    $prenom = $_SESSION['prenom'];
+}
+
 $serveur = "sportify.mysql.database.azure.com"; // Adresse du serveur MySQL Azure
 $utilisateur = "ece"; // Nom d'utilisateur MySQL
 $motdepasse = "Sportify!"; // Mot de passe MySQL
@@ -15,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['rdv_id'])) {
     $rdv_id = $_POST['rdv_id'];
 
     // Mettre à jour le statut du rendez-vous à "annulé"
-    $sql = "UPDATE rendez_vous SET statut = 'annulé' WHERE id = $rdv_id";
+    $sql = "DELETE FROM rendez_vous WHERE id = $rdv_id";
     if ($connexion->query($sql) === TRUE) {
         echo "<p>Rendez-vous annulé avec succès.</p>";
     } else {
@@ -23,12 +35,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['rdv_id'])) {
     }
 }
 
-$client_id = 5;
+$client_id = $id;
 
-$sql = "SELECT rdv.id, rdv.date_rdv, rdv.heure_debut, rdv.heure_fin, u.nom AS coach_nom, u.prenom AS coach_prenom, a.nom, a.adresse
+$sql = "SELECT rdv.id, rdv.date_rdv, rdv.heure_debut, rdv.heure_fin, u.nom AS coach_nom, u.prenom AS coach_prenom
         FROM rendez_vous rdv
         JOIN coachs c ON rdv.coach_id = c.id
-        JOIN activites_sportives a ON rdv.coach_id = a.id
         JOIN utilisateurs u ON c.utilisateur_id = u.id
         WHERE rdv.client_id = $client_id AND rdv.statut = 'confirmé'";
 
@@ -50,7 +61,7 @@ $result = $connexion->query($sql);
 <header>
     <h1>Sportify</h1>
     <nav class="navbar navbar-expand-md">
-        <img class="navbar-brand" src="imgs/acceuil/logo.png" alt="logo" style="width:100px;">
+        <img class="navbar-brand" src="imgs/logo.png" alt="logo" style="width:100px;">
         <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#main-navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -60,13 +71,16 @@ $result = $connexion->query($sql);
                 <li class="nav-item"><a class="nav-link" href="parcourir.php">Tout Parcourir</a></li>
                 <li class="nav-item"><a class="nav-link" href="recherche.php">Recherche</a></li>
                 <li class="nav-item"><a class="nav-link" href="RDV.php">RDV</a></li>
-                <li class="nav-item"><a class="nav-link" href="account.php">Connexion</a></li>
-            </ul>
+                <li class="nav-item">
+                    <a class="nav-link" href="<?php echo $connected ? 'account.php' : 'login.html'; ?>">
+                        <?php echo $connected ? $prenom : 'Connexion'; ?>
+                    </a>
+                </li>
         </div>
     </nav>
 </header>
-
-<h1>Rendez-vous confirmés</h1>
+<body>
+<h1>Rendez-vous Confirmés</h1>
 
 <?php if ($result->num_rows > 0): ?>
     <?php while($row = $result->fetch_assoc()): ?>
@@ -74,8 +88,7 @@ $result = $connexion->query($sql);
             <div class="rdv-header">Rendez-vous avec <?php echo $row['coach_prenom'] . ' ' . $row['coach_nom']; ?></div>
             <div class="rdv-details">Date: <?php echo $row['date_rdv']; ?></div>
             <div class="rdv-details">Heure: <?php echo $row['heure_debut'] . ' - ' . $row['heure_fin']; ?></div>
-            <div class="rdv-details">Adresse: <?php echo $row['adresse']; ?></div>
-            <div class="rdv-details">Sport :<?php echo $row['nom']; ?></div>
+            <div class="rdv-details">Téléphone:</div>
             <div class="rdv-details">Document demandé: [Insérer Document]</div>
             <div class="rdv-details">Digicode: [Insérer Digicode]</div>
             <form method="post" action="">
@@ -88,11 +101,10 @@ $result = $connexion->query($sql);
     <p>Aucun rendez-vous confirmé.</p>
 <?php endif; ?>
 
+</body>
 <footer>
     <p>&copy; 2024 Sportify. Tous droits réservés.</p>
 </footer>
-
-</body>
 </html>
 
 <?php

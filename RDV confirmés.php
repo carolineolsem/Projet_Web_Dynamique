@@ -1,4 +1,16 @@
 <?php
+
+session_start();
+
+if (!isset($_SESSION['id'])) $connected = false;
+else {
+    $connected = true;
+    // Récupérer les informations de l'utilisateur à partir de la session
+    $id = $_SESSION['id'];
+    $nom = $_SESSION['nom'];
+    $prenom = $_SESSION['prenom'];
+}
+
 $serveur = "sportify.mysql.database.azure.com"; // Adresse du serveur MySQL Azure
 $utilisateur = "ece"; // Nom d'utilisateur MySQL
 $motdepasse = "Sportify!"; // Mot de passe MySQL
@@ -9,9 +21,9 @@ if ($connexion->connect_error) {
     die("Échec de la connexion à la base de données : " . $connexion->connect_error);
 }
 
-$client_id = 5;
+$client_id = $id;
 
-$sql = "SELECT rdv.id, rdv.date_rdv, rdv.heure_debut, rdv.heure_fin, u.nom AS coach_nom, u.prenom AS coach_prenom, c.salle
+$sql = "SELECT rdv.id, rdv.date_rdv, rdv.heure_debut, rdv.heure_fin, u.nom AS coach_nom, u.prenom AS coach_prenom
         FROM rendez_vous rdv
         JOIN coachs c ON rdv.coach_id = c.id
         JOIN utilisateurs u ON c.utilisateur_id = u.id
@@ -35,23 +47,27 @@ $connexion->close();
 </head>
 <body>
 <header>
-   <h1>Sportify</h1>
-   <nav class="navbar navbar-expand-md">
-       <img class="navbar-brand" src="imgs/acceuil/logo.png" alt="logo" style="width:100px;">
-       <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#main-navigation">
-           <span class="navbar-toggler-icon"></span>
-       </button>
-       <div class="collapse navbar-collapse" id="main-navigation">
-           <ul class="navbar-nav">
-               <li class="nav-item"><a class="nav-link" href="accueil.php">Accueil</a></li>
-               <li class="nav-item"><a class="nav-link" href="parcourir.php">Tout Parcourir </a></li>
-               <li class="nav-item"><a class="nav-link" href="recherche.php">Recherche</a></li>
-               <li class="nav-item"><a class="nav-link" href="RDV.php">RDV</a></li>
-               <li class="nav-item"><a class="nav-link" href="account.php">Connexion</a></li>
-           </ul>
-       </div>
-   </nav>
+    <h1>Sportify</h1>
+    <nav class="navbar navbar-expand-md">
+        <img class="navbar-brand" src="imgs/logo.png" alt="logo" style="width:100px;">
+        <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#main-navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="main-navigation">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="accueil.php">Accueil</a></li>
+                <li class="nav-item"><a class="nav-link" href="parcourir.php">Tout Parcourir</a></li>
+                <li class="nav-item"><a class="nav-link" href="recherche.php">Recherche</a></li>
+                <li class="nav-item"><a class="nav-link" href="RDV.php">RDV</a></li>
+                <li class="nav-item">
+                    <a class="nav-link" href="<?php echo $connected ? 'account.php' : 'login.html'; ?>">
+                        <?php echo $connected ? $prenom : 'Connexion'; ?>
+                    </a>
+                </li>
+        </div>
+    </nav>
 </header>
+<body>
     <h1>Rendez-vous Confirmés</h1>
 
     <?php if ($result->num_rows > 0): ?>
@@ -60,7 +76,7 @@ $connexion->close();
                 <div class="rdv-header">Rendez-vous avec <?php echo $row['coach_prenom'] . ' ' . $row['coach_nom']; ?></div>
                 <div class="rdv-details">Date: <?php echo $row['date_rdv']; ?></div>
                 <div class="rdv-details">Heure: <?php echo $row['heure_debut'] . ' - ' . $row['heure_fin']; ?></div>
-                <div class="rdv-details">Salle: <?php echo $row['salle']; ?></div>
+                <!-- <div class="rdv-details">Salle: <?php echo $row['salle']; ?></div> -->
                 <div class="rdv-details">Téléphone:</div>
                 <div class="rdv-details">Document demandé: [Insérer Document]</div>
                 <div class="rdv-details">Digicode: [Insérer Digicode]</div>
@@ -73,8 +89,8 @@ $connexion->close();
     <?php else: ?>
         <p>Aucun rendez-vous confirmé.</p>
     <?php endif; ?>
-<footer>
-    <p>&copy; 2024 Sportify. Tous droits réservés.</p>
-</footer>
 </body>
+<footer>
+        <p>&copy; 2024 Sportify. Tous droits réservés.</p>
+</footer>
 </html>

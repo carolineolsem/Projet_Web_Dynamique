@@ -62,6 +62,10 @@ th, td {
     text-align: center;
 }
 
+li {
+    list-style-type: none;
+
+}
 .coach {
     display: flex;
     flex-direction: column;
@@ -102,3 +106,16 @@ th, td {
     justify-content: right;
     margin-left: 100px;
 }
+
+.RDV {
+    width: 200px;
+    background-color: #1fd614;
+    margin-right: 20px;
+}
+
+.CHAT {
+    width: 200px;
+    background: #1fd614;
+    margin-left: 20px;
+}
+

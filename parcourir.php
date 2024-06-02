@@ -37,7 +37,7 @@ else {
                 <li class="nav-item"><a class="nav-link" href="recherche.php">Recherche</a></li>
                 <li class="nav-item"><a class="nav-link" href="RDV.php">RDV</a></li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?php echo $connected ? 'account.php' : 'login.php'; ?>">
+                    <a class="nav-link" href="<?php echo $connected ? 'account.php' : 'login.html'; ?>">
                         <?php echo $connected ? $prenom : 'Connexion'; ?>
                     </a>
                 </li>

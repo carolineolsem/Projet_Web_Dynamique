@@ -1,0 +1,95 @@
+table {
+
+    border-collapse: collapse;
+    background-color: #FAF0CA;
+}
+th, td {
+    padding: 20px;
+    border: 1px solid #ddd;
+    text-align: center;
+    font-size: 12px;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.disponible {
+    background-color: #7bd373; /* Vert */
+}
+
+.non-disponible {
+    background-color: #fbfbfb; /* Gris */
+}
+
+.reserve {
+    background-color: #ff6d6d; /* Rouge */
+    font-size: 20px;
+}
+
+
+
+header {
+    background: #FAF0CA;
+    color: #007179;
+    text-align: center;
+}
+
+.navbar {
+    justify-content: center;
+    background: #007179;
+    color: #FAF0CA;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.nav-link, .navbar-brand {
+    color: #FAF0CA;
+    cursor: pointer;
+}
+
+.nav-link {
+    margin-right: 1em !important;
+}
+
+.nav-link:hover {
+    color: #EE964B;
+}
+
+.navbar-collapse {
+    justify-content: center;
+}
+
+h1 {
+    margin: 0;
+}
+
+main {
+    padding: 20px;
+}
+
+h2 {
+    color: #007179;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+
+.event-text h3 {
+    margin-top: 0;
+    color: #F4D35E;
+}
+
+
+
+footer {
+    background-color: #007179;
+    color: #FAF0CA;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}

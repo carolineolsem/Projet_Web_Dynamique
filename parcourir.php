@@ -211,6 +211,9 @@ else {
     <div id="salle-de-sport-omnes" class="container">
         <h1>Salle de sport Omnes</h1>
         <div id="services-disponibles">
+            <h2>Réserver une session</h2>
+        <a href="reserver_session.php" class="btn btn-primary RDV" style="background-color: #39c82d; border-color: #39c82d; align-self: center">Prendre RDV</a>
+        <div id="services-disponibles">
             <h2>Services disponibles</h2>
             <p>
                 Nous offrons une gamme complète de services pour répondre à tous vos besoins en matière de fitness, y compris des entraîneurs personnels, des cours de groupe, et des équipements de pointe.

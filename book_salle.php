@@ -40,6 +40,6 @@ $stmt->execute();
 $stmt->close();
 $connexion->close();
 
-header("Location: RDV.php");
+header("Location: payement_form.php");
 exit;
 ?>

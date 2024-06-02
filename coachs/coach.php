@@ -43,6 +43,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 coachs.specialite, 
                 coachs.photo, 
                 coachs.cv, 
+                coachs.salle,
                 coachs.id,
                 disponibilites.jour, 
                 disponibilites.heure_debut, 
@@ -101,7 +102,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <header>
     <h1>Sportify</h1>
     <nav class="navbar navbar-expand-md">
-        <img class="navbar-brand" src="imgs/logo.png" alt="logo" style="width:100px;">
+        <img class="navbar-brand" src="../imgs/logo.png" alt="logo" style="width:100px;">
         <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#main-navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -137,6 +138,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 echo "<h2>" . $coach_info["prenom_coach"] . " " . $coach_info["nom_coach"] . "</h2>";
                 echo "<p>Email: " . $coach_info["email"] . "</p>";
                 echo "<p>Spécialité: " . $coach_info["specialite"] . "</p>";
+                echo "<p>Salle: " . $coach_info["salle"] . "</p>";
                 echo "<p><a href='" . $coach_info["cv"] . "' target='_blank'>Voir le CV</a></p>";
             }
             ?>

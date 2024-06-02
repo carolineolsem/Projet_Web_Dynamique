@@ -127,7 +127,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             if ($coach_info && $coach_info['photo']) {
                 //echo '<img src=". $coach_info['photo'] . " alt="Photo du coach">';
                 echo "<img src='" . $coach_info['photo'] . "'>";
-                //echo '<img src="../imgs/coachs/guy_dumais.jpg" alt="Photo du coach">';
+                //echo '<img src="../imgs/coachs/alfred.jpg" alt="Photo du coach">';
             }
             ?>
         </div>

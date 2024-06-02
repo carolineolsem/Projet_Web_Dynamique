@@ -4,30 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4eba4a59-222f-49e9-bc1a-3f53622f8b2d" name="Changes" comment="CHAT BETA">
-      <change afterPath="$PROJECT_DIR$/imgs/coachs/alfred.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/imgs/coachs/bamba.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/imgs/coachs/beth.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/imgs/coachs/david.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/imgs/coachs/marie.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/imgs/coachs/nicolas.d.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/imgs/coachs/nicolas.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/imgs/coachs/pierre.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/imgs/coachs/quentin.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/imgs/coachs/rachid.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/imgs/coachs/thomas.png" afterDir="false" />
+    <list default="true" id="4eba4a59-222f-49e9-bc1a-3f53622f8b2d" name="Changes" comment="photos">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imgs/coachs/allain_phillipe.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imgs/coachs/gali_pette.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imgs/coachs/guy_dumais.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imgs/coachs/jane_doe.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imgs/coachs/john_smith.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imgs/coachs/lea_dousse.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imgs/coachs/marin_deaudouce.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imgs/coachs/pierre_boulet.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imgs/coachs/samanta_keur.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imgs/coachs/sun_shine.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imgs/coachs/tousse_ensemble.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RDV annuler.php" beforeDir="false" afterPath="$PROJECT_DIR$/RDV annuler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RDV confirmés.php" beforeDir="false" afterPath="$PROJECT_DIR$/RDV confirmés.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,6 +59,7 @@
     "JavaScript Debug.avion.php.executor": "Run",
     "JavaScript Debug.login.html.executor": "Run",
     "JavaScript Debug.parcourir.html.executor": "Run",
+    "JavaScript Debug.signup.html.executor": "Run",
     "PHP Script.avion.php.executor": "Run",
     "PHP Script.chat.php.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -199,7 +180,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717264149295</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="photos">
+      <option name="closed" value="true" />
+      <created>1717333522954</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1717333522954</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -224,7 +213,8 @@
     <MESSAGE value="modif" />
     <MESSAGE value="MEGA UPDATE PHP" />
     <MESSAGE value="CHAT BETA" />
-    <option name="LAST_COMMIT_MESSAGE" value="CHAT BETA" />
+    <MESSAGE value="photos" />
+    <option name="LAST_COMMIT_MESSAGE" value="photos" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

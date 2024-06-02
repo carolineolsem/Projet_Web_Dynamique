@@ -23,10 +23,11 @@ if ($connexion->connect_error) {
 
 $client_id = $id;
 
-$sql = "SELECT rdv.id, rdv.date_rdv, rdv.heure_debut, rdv.heure_fin, u.nom AS coach_nom, u.prenom AS coach_prenom
+$sql = "SELECT rdv.id, rdv.date_rdv, rdv.heure_debut, rdv.heure_fin, u.nom AS coach_nom, u.prenom AS coach_prenom, a.adresse, a.digicode, a.nom
         FROM rendez_vous rdv
         JOIN coachs c ON rdv.coach_id = c.id
         JOIN utilisateurs u ON c.utilisateur_id = u.id
+        JOIN activites_sportives a ON rdv.coach_id = a.id
         WHERE rdv.client_id = $client_id AND rdv.statut = 'confirmé'";
 
 $result = $connexion->query($sql);
@@ -74,12 +75,11 @@ $connexion->close();
         <?php while($row = $result->fetch_assoc()): ?>
             <div class="rdv-container">
                 <div class="rdv-header">Rendez-vous avec <?php echo $row['coach_prenom'] . ' ' . $row['coach_nom']; ?></div>
+                <div class="rdv-details">Sport: <?php echo $row['nom']; ?></div>
                 <div class="rdv-details">Date: <?php echo $row['date_rdv']; ?></div>
                 <div class="rdv-details">Heure: <?php echo $row['heure_debut'] . ' - ' . $row['heure_fin']; ?></div>
-                <!-- <div class="rdv-details">Salle: <?php echo $row['salle']; ?></div> -->
-                <div class="rdv-details">Téléphone:</div>
-                <div class="rdv-details">Document demandé: [Insérer Document]</div>
-                <div class="rdv-details">Digicode: [Insérer Digicode]</div>
+                <div class="rdv-details">Adresse: <?php echo $row['adresse']; ?></div>
+                <div class="rdv-details">Digicode: <?php echo $row['digicode']; ?></div>
                 <form method="post" action="RDV%20annuler.php">
                     <input type="hidden" name="rdv_id" value="<?php echo $row['id']; ?>">
                     <button type="submit" class="cancel-button">Annulation de RDV</button>

@@ -15,12 +15,14 @@ if ($db_found) {
             $recherche = $_POST["recherche"];
             
             // Construire la requête SQL
-            $sql = "SELECT u.nom, u.prenom, c.specialite, c.photo, c.cv
+            $sql = "SELECT u.nom, u.prenom, c.specialite, c.photo, c.cv, c.salle
                     FROM coachs c
                     JOIN utilisateurs u ON c.utilisateur_id = u.id
                     WHERE u.nom LIKE '%$recherche%' 
                        OR u.prenom LIKE '%$recherche%'
-                       OR c.specialite LIKE '%$recherche%'";
+                       OR c.specialite LIKE '%$recherche%'
+                       OR c.salle LIKE '%$recherche%'";
+
 
             // Exécuter la requête SQL
             $result = mysqli_query($db_handle, $sql);
@@ -77,11 +79,11 @@ mysqli_close($db_handle);
                 if ($row["photo"]) {
                     echo '<img src="' . $row["photo"] . '" alt="Photo de ' . $row["prenom"] . '" width="100"><br>';
                 }
-                // Afficher le nom et prénom du coach avec la couleur spécifiée
                 echo '<h2 style="color: #007179;">' . $row["prenom"] . ' ' . $row["nom"] . '</h2>';
                 // Afficher la spécialité
                 echo '<p>Spécialité: ' . $row["specialite"] . '</p>';
                 // Afficher la salle
+                echo '<p>Salle: ' . $row["salle"] . '</p>';
                 echo '</div>';
             }
         }

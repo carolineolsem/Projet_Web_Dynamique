@@ -98,26 +98,90 @@ if ($stmt->num_rows > 0) {
         <!-- IF ADMIN, SHOW EVERYTHING -->
     <?php if ($type_utilisateur == 'administrateur') { ?>
         <h2>Vous êtes un administrateur.</h2>
-        <a href="admin_users.php">Gérer les utilisateurs</a>
-        <a href="admin_coachs.php">Gérer les coachs</a>
+        <p> Nom : <?php echo $nom; ?> </p>
+        <p> Prénom : <?php echo $prenom; ?> </p>
+        <p> Email : <?php echo $email; ?> </p>
+        <a class="nav-link btn btn-info" style="margin-bottom: 5px" href="admin_users.php">Gérer les utilisateurs</a>
+        <a class="nav-link btn btn-info" href="admin_coachs.php">Gérer les coachs</a>
     <?php } ?>
     <!-- IF COACH, SHOW COACH PAGE -->
     <?php if ($type_utilisateur == 'coach') { ?>
         <h2>Vous êtes un coach.</h2>
-        <a href="coachs/coach.php">Voir votre page de coach</a>
+        <p> Nom : <?php echo $nom; ?> </p>
+        <p> Prénom : <?php echo $prenom; ?> </p>
+        <p> Email : <?php echo $email; ?> </p>
+
     <?php } ?>
     <!-- IF USER, SHOW USER PAGE -->
     <?php if ($type_utilisateur == 'client') { ?>
         <h2>Vous êtes un utilisateur.</h2>
-        <a href="users/user.php">Voir votre page d'utilisateur</a>
+        <p> Nom : <?php echo $nom; ?> </p>
+        <p> Prénom : <?php echo $prenom; ?> </p>
+        <p> Email : <?php echo $email; ?> </p>
     <?php }
     ?>
 
         <br>    <a class="nav-link btn btn-danger" href="logout.php">Logout</a>
     </div>
+
+    <?php if ($type_utilisateur == 'coach') { ?>
+    <h2 style="padding-bottom: 20px; padding-top: 20px; text-align: center;">Rendez-vous</h2>
+        <!-- LISTE DES RDV DU COACH -->
+                <ul class="list">
+                    <!-- Liste des rendez-vous, à remplir dynamiquement -->
+                    <!-- APPELER fetch_users_talked_to.php POUR REMPLIR CETTE LISTE -->
+                    <?php
+                    // Obtenir l'id du coach a partir de l'utilisateur_id
+                    $sql = "SELECT id FROM coachs WHERE utilisateur_id = ?";
+                    $stmt = $connexion->prepare($sql);
+                    $stmt->bind_param("i", $id);
+                    $stmt->execute();
+                    $result = $stmt->get_result();
+                    $row = $result->fetch_assoc();
+                    $coach_id = $row['id'];
+
+                    // Obtenir les rendez-vous du coach
+                    $sql = "SELECT client_id, date_rdv, heure_debut, heure_fin FROM rendez_vous WHERE coach_id = ?";
+                    $stmt = $connexion->prepare($sql);
+                    $stmt->bind_param("i", $coach_id);
+                    $stmt->execute();
+                    $result = $stmt->get_result();
+                    $rdv_info = [];
+                    while ($row = $result->fetch_assoc()) {
+                        $rdv_info[] = $row;
+                    }
+
+
+                    foreach ($rdv_info as $rdv) {
+                        //GET NOM PRENOM CLIENT
+                        $sql = "SELECT nom, prenom FROM utilisateurs WHERE id = ?";
+                        $stmt = $connexion->prepare($sql);
+                        $stmt->bind_param("i", $rdv['client_id']);
+                        $stmt->execute();
+                        $resultCLIENT = $stmt->get_result();
+                        $client_info = $resultCLIENT->fetch_assoc();
+
+                        if ($client_info && array_key_exists('prenom', $client_info) && array_key_exists('nom', $client_info)) {
+                            echo '<div class="rdv_info" style="border: 1px solid #ccc; padding: 20px; background-color: #FAF0CA; color: #333; font-size: 18px;">';
+                            echo '<p>'. $client_info['prenom'] . ' ' . $client_info['nom'] . '</p>';
+                            echo '<p>Le: ' . $rdv['date_rdv'] . '</p>';
+                            echo '<p>'. $rdv['heure_debut'] . ' à ' . $rdv['heure_fin'] . '</p>';
+                            echo '</div>';
+                        }
+                    }
+
+                    ?>
+
+                </ul>
+    <?php }
+    ?>
+
+
+
+<h2 style="padding-bottom: 20px; padding-top: 20px; text-align: center;">Messages</h2>
     <div class="container clearfix" style="width: 30%">
         <div class="people-list" id="people-list" ">
-            <div class="search" style="width: 85%">
+            <div class="search" style="width: 65%">
                 <input type="text" placeholder="search" />
                 <i class="fa fa-search"></i>
             </div>
@@ -189,5 +253,8 @@ if ($stmt->num_rows > 0) {
     }
 </script>
 </body>
+<footer>
+    <p>&copy; 2024 Sportify. Tous droits réservés.</p>
+</footer>
 </html>
 

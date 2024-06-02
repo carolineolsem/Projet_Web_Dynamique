@@ -1,3 +1,9 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -6,6 +12,7 @@ header {
     background: #FAF0CA;
     color: #007179;
     text-align: center;
+    margin-bottom: 20px;
 }
 
 .navbar {
@@ -66,17 +73,40 @@ li {
     list-style-type: none;
 
 }
+
+
+/* User Info */
 .user_info {
+    background: #FAF0CA;
+    padding: 20px;
+    border-radius: 5px;
+    width: 70%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    margin: auto;
-    margin-top: 50px;
-    padding: 20px;
-    border: 1px solid black;
-    width: 800px;
-    text-align: center;
+    margin: auto; /* Ajouté pour centrer le bloc */
+
+}
+
+/* Buttons */
+.btn-info {
+    background: #007179;
+    border: none;
+    color: #FAF0CA;
+    margin-bottom: 5px;
+    transition: background 0.3s;
+}
+
+.btn-info:hover {
+    background: #005f5f;
+}
+
+/* Footer */
+footer {
+    background: #007179;
+    color: #FAF0CA;
+    padding: 10px 0;
 }
 
 .horraires {
@@ -144,6 +174,7 @@ body {
     width: 750px;
     background: #444753;
     border-radius: 5px;
+    margin-bottom: 20px;
 }
 
 .people-list {
@@ -171,7 +202,7 @@ body {
 
     ul {
         padding: 20px;
-        height: 770px;
+        height: 500px;
 
 
 
@@ -203,7 +234,7 @@ body {
 }
 
 .chat {
-    width: 40%;
+    width: 50%;
     height: 70%;
     justify-content: center;
     align-items: center;
@@ -403,7 +434,6 @@ body {
 
 .list .clearfix .name {
     font-weight: bold;
-    margin-left: 10px;
 }
 
 .name.user-green {
@@ -416,4 +446,19 @@ body {
 
 .name.user-grey {
     color: grey;
+}
+
+
+.rdv_info {
+    background: #FAF0CA;
+    padding: 20px;
+    border-radius: 5px;
+    width: 20%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    padding-left: 0;
+
 }

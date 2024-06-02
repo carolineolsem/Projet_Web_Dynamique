@@ -1,0 +1,66 @@
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    background: #FAF0CA;
+    color: #007179;
+    text-align: center;
+}
+
+.navbar {
+    justify-content: center;
+    background: #007179;
+    color: #FAF0CA;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.nav-link, .navbar-brand {
+    color: #FAF0CA;
+    cursor: pointer;
+}
+
+.nav-link {
+    margin-right: 1em !important;
+}
+
+.nav-link:hover {
+    color: #EE964B;
+}
+
+.navbar-collapse {
+    justify-content: center;
+}
+
+.container {
+    margin-top: 50px;
+}
+
+.card {
+    margin-bottom: 20px;
+}
+
+.card-header {
+    background-color: #007179;
+    color: #007179;
+    font-weight: bold;
+}
+
+.card-body {
+    background-color: #FAF0CA;
+}
+
+button {
+    margin: 5px;
+}
+
+footer {
+    background: #007179;
+    color: #FAF0CA;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

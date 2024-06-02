@@ -58,7 +58,7 @@ if ($connexion->connect_error) {
 </header>
 
 <div class="container" style="width: 40%;padding-bottom: 100px">
-    <h2>Ajouter un nouveau coach</h2>
+    <h2>Ajouter un nouveau admin</h2>
     <form action="admin_create_admin.php" method="post">
         <div class="form-group">
             <label for="nom">Nom:</label>

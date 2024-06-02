@@ -21,7 +21,7 @@ else {
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>RDV - Sportify</title>
-   <link rel="stylesheet" href="styles.css">
+   <link rel="stylesheet" href="stylesheet.css">
    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
@@ -46,9 +46,14 @@ else {
         </div>
     </nav>
 </header>
-    <h1>Rendez-vous confirmés</h1>
-    <p>Cliquez sur le bouton ci-dessous pour voir vos rendez-vous confirmés.</p>
-    <a href="RDV%20confirmés.php" class="link-button">Voir les Rendez-vous Confirmés</a>
+    <div id="barreRecherche" class="barre-recherche">
+        <h1>Rendez-vous confirmés</h1>
+        <p>Cliquez sur le bouton ci-dessous pour voir vos rendez-vous confirmés.</p>
+        <a href="RDV%20confirmés.php" class="link-button">Voir les Rendez-vous Confirmés</a>
+    </div>
 
 </body>
+<footer>
+    <p>&copy; 2024 Sportify. Tous droits réservés.</p>
+</footer>
 </html>

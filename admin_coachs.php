@@ -1,9 +1,10 @@
 <?php
 session_start();
 
-if (!isset($_SESSION['id'])) {
-    // Si l'utilisateur n'est pas connecté, redirigez-le vers la page de connexion
-    header("Location: login.html");
+// Check if the user is logged in and is an admin
+if (!isset($_SESSION['id']) || $_SESSION['type_utilisateur'] != 'administrateur') {
+    // If the user is not logged in or is not an admin, redirect them to the login page
+    header("Location: login.php");
     exit();
 }
 
@@ -79,7 +80,7 @@ $result = $connexion->query($sql);
                                 <p>Date de création: ' . $row["date_creation"] . '</p>
                                 <button class="btn btn-danger" onclick="location.href=\'admin_delete_user.php?id=' . $id . '\'">Supprimer</button>
                                 <button class="btn btn-success" onclick="location.href=\'chat/get_all_messages.php?utilisateur_id=' . $id . '\'">Contacter</button>
-                                <button class="btn btn-primary" onclick="location.href=\'admin_xml.php?id=' . $id . '\'">XML</button>
+                                <button class="btn btn-primary" onclick="location.href=\'admin_xml.php?utilisateur_id=' . $id . '\'">XML</button>
                             </div>
                         </div>
                     </div>';

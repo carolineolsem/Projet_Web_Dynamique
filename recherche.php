@@ -4,7 +4,6 @@ session_start();
 if (!isset($_SESSION['id'])) $connected = false;
 else {
     $connected = true;
-    // Récupérer les informations de l'utilisateur à partir de la session
     $id = $_SESSION['id'];
     $nom = $_SESSION['nom'];
     $prenom = $_SESSION['prenom'];
@@ -24,11 +23,8 @@ else {
    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
    <script>
        $(document).ready(function() {
-           // Écouter l'événement click sur l'onglet "Recherche" du header
            $('#lienRecherche').click(function(e) {
-               // Empêcher le comportement par défaut du lien
                e.preventDefault();
-               // Afficher la barre de recherche
                $('#barreRecherche').show();
            });
        });
@@ -57,7 +53,6 @@ else {
     </nav>
 </header>
 
-<!-- Barre de recherche -->
 <div id="barreRecherche" class="barre-recherche">
     <h1>Faites votre recherche</h1>
     <form action="barre_recherche.php" method="POST">
@@ -66,7 +61,8 @@ else {
         <button type="submit" name="rechercher">Rechercher</button>
     </form>
 </div>
-
-
 </body>
+<footer>
+    <p>&copy; 2024 Sportify. Tous droits réservés.</p>
+</footer>
 </html>

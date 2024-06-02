@@ -18,7 +18,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password1 = $_POST['password1'];
     $password2 = $_POST['password2'];
 
-    // Vérifier que tous les champs sont remplis
     if (empty($email) || empty($nom) || empty($prenom) || empty($password1) || empty($password2)) {
         echo "Tous les champs doivent être remplis.";
         exit();

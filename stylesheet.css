@@ -43,85 +43,94 @@ header {
 }
 
 .barre-recherche {
-    max-width: 600px; /* Largeur maximale de la barre de recherche */
-    margin: 100px auto; /* Centrage horizontal et marge supérieure */
-    border-radius: 20px; /* Bord arrondi */
-    background-color: #f1f1f1; /* Couleur de fond grisée */
-    padding: 10px; /* Espacement interne */
+    max-width: 600px;
+    margin: 100px auto;
+    border-radius: 20px;
+    background-color: #f1f1f1;
+    padding: 10px;
 }
 
 .barre-recherche input[type=search] {
-    width: 100%; /* 100% de la largeur de la barre de recherche */
-    padding: 10px; /* Espacement interne */
-    border: none; /* Supprimer la bordure */
-    border-radius: 20px; /* Bord arrondi */
-    outline: none; /* Supprimer la bordure de focus */
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
 }
 
 .barre-recherche button[type=submit] {
-    width: 100%; /* 100% de la largeur du bouton */
-    padding: 10px; /* Espacement interne */
-    border: none; /* Supprimer la bordure */
-    border-radius: 20px; /* Bord arrondi */
-    background-color: #007179; /* Couleur de fond du bouton */
-    color: #FAF0CA; /* Couleur du texte */
-    cursor: pointer; /* Curseur pointeur */
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    background-color: #007179;
+    color: #FAF0CA;
+    cursor: pointer;
 }
 
 .barre-recherche::placeholder {
-    color: #aaa; /* Couleur du texte indicatif */
-    font-style: italic; /* Style d'écriture italique */
+    color: #aaa;
+    font-style: italic;
 }
 
 .resultats-recherche {
-    margin: 0 auto; /* Centrer la section horizontalement */
-    width: 60%; /* Définir une largeur maximale pour la section */
-    background-color: #f9f9f9; /* Couleur de fond gris clair */
-    padding: 20px; /* Ajouter un espace intérieur */
-    border-radius: 10px; /* Coins arrondis */
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Ombre douce */
+    margin: 0 auto;
+    width: 60%;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Style pour les éléments individuels des résultats */
 .resultat {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 20px; /* Espacement entre les résultats */
-    background-color: #e0e0e0; /* Fond grisé pour chaque résultat */
-    padding: 10px; /* Ajouter un espace intérieur */
-    border-radius: 10px; /* Coins arrondis */
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1); /* Petite ombre */
+    margin-bottom: 20px;
+    background-color: #e0e0e0;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Style pour les en-têtes des résultats */
+
 .resultat h2 {
-    font-size: 24px; /* Taille de police */
-    margin-bottom: 5px; /* Espacement en dessous de l'en-tête */
-    color: #007179; /* Couleur du texte */
+    font-size: 24px;
+    margin-bottom: 5px;
+    color: #007179;
 }
 
-/* Style pour les détails des résultats */
+
 .resultat p {
-    font-size: 16px; /* Taille de police */
-    margin: 2px 0; /* Espacement en dessous des détails */
+    font-size: 16px;
+    margin: 2px 0;
 }
 
-/* Style pour les images dans les résultats */
+
 .resultat img {
-    border-radius: 10px; /* Coins arrondis */
-    margin-right: 20px; /* Espacement à droite de l'image */
-    width: 100px; /* Taille fixe de l'image */
-    height: 100px; /* Taille fixe de l'image */
-    object-fit: cover; /* Ajuster l'image pour remplir l'espace */
+    border-radius: 10px;
+    margin-right: 20px;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
 }
 
-/* Style pour les liens dans les résultats */
+
 .resultat a {
-    color: #007bff; /* Couleur du lien */
-    text-decoration: none; /* Supprimer la décoration de soulignement */
+    color: #007bff;
+    text-decoration: none;
 }
 
 .resultat a:hover {
-    text-decoration: underline; /* Souligner au survol */
+    text-decoration: underline;
+}
+
+footer {
+    background-color: #007179;
+    color: #FAF0CA;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    width: 100%;
+    bottom: 0;
 }

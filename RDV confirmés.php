@@ -15,7 +15,7 @@ $serveur = "sportify.mysql.database.azure.com"; // Adresse du serveur MySQL Azur
 $utilisateur = "ece"; // Nom d'utilisateur MySQL
 $motdepasse = "Sportify!"; // Mot de passe MySQL
 $basededonnees = "sportify"; // Nom de la base de données MySQL
-$port = 3306; // Replace with your MySQL server's port if it's not 3306
+$port = 3306;
 $connexion = new mysqli($serveur, $utilisateur, $motdepasse, $basededonnees, $port);
 if ($connexion->connect_error) {
     die("Échec de la connexion à la base de données : " . $connexion->connect_error);

@@ -4,15 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4eba4a59-222f-49e9-bc1a-3f53622f8b2d" name="Changes" comment="CHAT BETA">
-      <change beforePath="$PROJECT_DIR$/.idea/Projet_Web_Dynamique.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Projet_Web_Dynamique.iml" afterDir="false" />
+    <list default="true" id="4eba4a59-222f-49e9-bc1a-3f53622f8b2d" name="Changes" comment="rdv">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/chat.js" beforeDir="false" afterPath="$PROJECT_DIR$/chat/chat.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/get_all_messages.php" beforeDir="false" afterPath="$PROJECT_DIR$/chat/get_all_messages.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/send_message.php" beforeDir="false" afterPath="$PROJECT_DIR$/chat/send_message.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/chat/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coachs/coach.php" beforeDir="false" afterPath="$PROJECT_DIR$/coachs/coach.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coachs/styles_coach.css" beforeDir="false" afterPath="$PROJECT_DIR$/coachs/styles_coach.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,12 +32,12 @@
     &quot;assignee&quot;: &quot;carolineolsem&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/carolineolsem/Projet_Web_Dynamique.git&quot;,
-    &quot;accountId&quot;: &quot;d1777ce9-0da2-4933-8c4b-befda8d22e92&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/carolineolsem/Projet_Web_Dynamique.git",
+    "accountId": "5c081f6f-3e99-48ee-b863-bf4bafa45422"
   }
-}</component>
+}]]></component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
@@ -62,7 +55,9 @@
     "JavaScript Debug.accueil.html.executor": "Run",
     "JavaScript Debug.avion.html.executor": "Run",
     "JavaScript Debug.avion.php.executor": "Run",
+    "JavaScript Debug.login.html.executor": "Run",
     "JavaScript Debug.parcourir.html.executor": "Run",
+    "JavaScript Debug.signup.html.executor": "Run",
     "PHP Script.avion.php.executor": "Run",
     "PHP Script.chat.php.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -83,6 +78,11 @@
     ]
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\carol\PhpstormProjects\Projet_Web_Dynamique\imgs\coachs" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -178,7 +178,23 @@
       <option name="project" value="LOCAL" />
       <updated>1717264149295</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="photos">
+      <option name="closed" value="true" />
+      <created>1717333522954</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1717333522954</updated>
+    </task>
+    <task id="LOCAL-00011" summary="rdv">
+      <option name="closed" value="true" />
+      <created>1717340675352</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1717340675352</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -203,7 +219,9 @@
     <MESSAGE value="modif" />
     <MESSAGE value="MEGA UPDATE PHP" />
     <MESSAGE value="CHAT BETA" />
-    <option name="LAST_COMMIT_MESSAGE" value="CHAT BETA" />
+    <MESSAGE value="photos" />
+    <MESSAGE value="rdv" />
+    <option name="LAST_COMMIT_MESSAGE" value="rdv" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

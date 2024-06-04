@@ -43,8 +43,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 coachs.specialite, 
                 coachs.photo, 
                 coachs.cv, 
-                coachs.salle,
-                coachs.id,
                 disponibilites.jour, 
                 disponibilites.heure_debut, 
                 disponibilites.heure_fin
@@ -81,8 +79,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
 
         // Fermer la connexion
+        $stmt->close();
     }
 }
+$connexion->close();
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -128,7 +128,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             if ($coach_info && $coach_info['photo']) {
                 //echo '<img src=". $coach_info['photo'] . " alt="Photo du coach">';
                 echo "<img src='" . $coach_info['photo'] . "'>";
-                //echo '<img src="../imgs/coachs/alfred.jpg" alt="Photo du coach">';
+                //echo '<img src="../imgs/coachs/guy_dumais.jpg" alt="Photo du coach">';
             }
             ?>
         </div>
@@ -138,11 +138,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 echo "<h2>" . $coach_info["prenom_coach"] . " " . $coach_info["nom_coach"] . "</h2>";
                 echo "<p>Email: " . $coach_info["email"] . "</p>";
                 echo "<p>Spécialité: " . $coach_info["specialite"] . "</p>";
-                echo "<p>Salle: " . $coach_info["salle"] . "</p>";
                 echo "<p><a href='" . $coach_info["cv"] . "' target='_blank'>Voir le CV</a></p>";
             }
             ?>
-
         </div>
     </div>
     <div class="horraires">
@@ -168,18 +166,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 ?>
             </tr>
         </table>
-        <?php
-        // SQL REQUEST TO GET THE UTILISATEUR_ID
-        $sql = "SELECT utilisateur_id FROM coachs WHERE id = ?";
-        $stmt = $connexion->prepare($sql);
-        $stmt->bind_param("i", $coach_info['id']);
-        $stmt->execute();
-        $stmt->bind_result($utilisateur_id);
-        $stmt->fetch();
-        $stmt->free_result();
-        $stmt->close();
-        ?>
-        <a href="../prendre_RDV.php?coach_id=<?php echo $coach_info['id']; ?>" class="btn btn-primary RDV" style="background-color: #39c82d; border-color: #39c82d">Prendre RDV</a>        <a href="../chat/get_all_messages.php?coach_id=<?php echo $utilisateur_id; ?>" class="btn btn-secondary CHAT" style="background-color: #0c76af; border-color: #0c76af">Communiquer</a>
     </div>
 </div>
 </body>
